@@ -354,6 +354,7 @@ MigrationBackup/
 /PC.PowerApps/PC.PowerApps.FunctionApp/Properties/serviceDependencies.PCPowerAppsFunctionApp - Zip Deploy.json
 /PC.PowerApps/PC.PowerApps.FunctionApp/Properties/ServiceDependencies/PCPowerAppsFunctionApp - Zip Deploy/appInsights1.arm.json
 /PC.PowerApps/PC.PowerApps.FunctionApp/Properties/ServiceDependencies/PCPowerAppsFunctionApp - Zip Deploy/profile.arm.json
+/PC.PowerApps/PC.PowerApps.FunctionApp/Properties/ServiceDependencies/PCPowerAppsFunctionApp - Zip Deploy/storage1.arm.json
 /PC.PowerApps/PC.PowerApps.WebResources/dist
 /PC.PowerApps/PC.PowerApps.WebResources/src/*.js
 /PC.PowerApps/PC.PowerApps.WebResources/src/*.js.map
