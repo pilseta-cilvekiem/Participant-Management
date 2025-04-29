@@ -212,6 +212,11 @@ namespace PC.PowerApps.Common.Repositories
             }
         }
 
+        public static void ClearNonPaymentAmount(pc_Transaction transaction)
+        {
+            transaction.pc_NonPaymentAmount = new();
+        }
+
         public static void MarkAsNonPayment(pc_Transaction transaction)
         {
             transaction.pc_NonPaymentAmount = new(Utils.GetAmountOrZero(transaction.pc_RemainingAmount));

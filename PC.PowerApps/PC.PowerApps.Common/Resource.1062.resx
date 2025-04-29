@@ -153,6 +153,9 @@
   <data name="CantManuallyCreateTransaction" xml:space="preserve">
     <value>Nevar manuāli izveidot Transakciju.</value>
   </data>
+  <data name="ClearingNonPaymentAmount" xml:space="preserve">
+    <value>Nodzēšu ne maksājumu summu...</value>
+  </data>
   <data name="MarkingTransactionAsNonPayment" xml:space="preserve">
     <value>Atzīmēju transakciju kā ne maksājumu...</value>
   </data>

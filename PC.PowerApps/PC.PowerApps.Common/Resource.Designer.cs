@@ -169,6 +169,15 @@ namespace PC.PowerApps.Common {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Clearing non-payment amount from the transaction....
+        /// </summary>
+        public static string ClearingNonPaymentAmount {
+            get {
+                return ResourceManager.GetString("ClearingNonPaymentAmount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Marking the transaction as non-payment....
         /// </summary>
         public static string MarkingTransactionAsNonPayment {
