@@ -15,7 +15,7 @@ namespace PC.PowerApps.Plugins.Bound.ParticipationFeeRules
             PostCreateUpdatePluginContext<pc_ParticipationFeeRule> context = new(serviceProvider, User.System, User.User);
             pc_ParticipationFeeRule participationFeeRule = context.PostImage;
 
-            if (context.GetIsAnyAttributeModified(pfr => new { pfr.pc_Amount, pfr.pc_From, pfr.pc_Till }))
+            if (context.GetIsAnyAttributeModified(pfr => new { pfr.pc_Amount, pfr.pc_ApplyToFirstMonth, pfr.pc_From, pfr.pc_Till }))
             {
                 DateTime endOfLastMonth = context.GetCurrentOrganizationTime().GetFirstDayOfMonth().AddDays(-1);
                 Period pastMonths = new(null, endOfLastMonth);
@@ -24,7 +24,7 @@ namespace PC.PowerApps.Plugins.Bound.ParticipationFeeRules
                     : new Period(context.PreImage.pc_From, context.PreImage.pc_Till).Intersect(pastMonths);
                 Period postPeriodPastMonths = new Period(participationFeeRule.pc_From, participationFeeRule.pc_Till).Intersect(pastMonths);
 
-                if ((context.GetIsAnyAttributeModified(pfr => pfr.pc_Amount) && (prePeriodPastMonths != null || postPeriodPastMonths != null)) ||
+                if ((context.GetIsAnyAttributeModified(pfr => new { pfr.pc_Amount, pfr.pc_ApplyToFirstMonth }) && (prePeriodPastMonths != null || postPeriodPastMonths != null)) ||
                     prePeriodPastMonths != postPeriodPastMonths)
                 {
                     ContactRepository.ScheduleRecalculate(context, participantTill: false, participationLevel: false, requiredParticipationFee: true);

@@ -65,6 +65,7 @@ namespace PC.PowerApps.Common
                 .Select(pfr => new pc_ParticipationFeeRule
                 {
                     pc_Amount = pfr.pc_Amount,
+                    pc_ApplyToFirstMonth = pfr.pc_ApplyToFirstMonth,
                     pc_From = pfr.pc_From,
                     pc_Till = pfr.pc_Till,
                 })

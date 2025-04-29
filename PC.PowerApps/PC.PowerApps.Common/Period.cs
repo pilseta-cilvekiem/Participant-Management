@@ -146,6 +146,13 @@ namespace PC.PowerApps.Common
                 .ToList();
         }
 
+        public Period GetFirstCalendarMonth()
+        {
+            DateTime newFrom = From.GetFirstDayOfMonth();
+            DateTime newTill = From.GetLastDayOfMonth();
+            return new(newFrom, newTill);
+        }
+
         public override bool Equals(object obj)
         {
             return obj is Period period &&

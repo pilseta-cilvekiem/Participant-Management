@@ -6,7 +6,7 @@
 //     Changes to this file may cause incorrect behavior and will be lost if
 //     the code is regenerated.
 // </auto-generated>
-// Created via this command line: "C:\Users\Mihails\AppData\Roaming\MscrmTools\XrmToolBox\Plugins\DLaB.EarlyBoundGenerator\crmsvcutil.exe" /namespace:"PC.PowerApps.Common.Entities.Dataverse" /SuppressGeneratedCodeAttribute /out:"C:\Users\Mihails\source\repos\Participant-Management\PC.PowerApps\PC.PowerApps.Common\Entities\DataverseOptionSets.cs" /codecustomization:"DLaB.CrmSvcUtilExtensions.OptionSet.CustomizeCodeDomService,DLaB.CrmSvcUtilExtensions" /codegenerationservice:"DLaB.CrmSvcUtilExtensions.OptionSet.CustomCodeGenerationService,DLaB.CrmSvcUtilExtensions" /codewriterfilter:"DLaB.CrmSvcUtilExtensions.OptionSet.CodeWriterFilterService,DLaB.CrmSvcUtilExtensions" /namingservice:"DLaB.CrmSvcUtilExtensions.NamingService,DLaB.CrmSvcUtilExtensions" /metadataproviderservice:"DLaB.CrmSvcUtilExtensions.BaseMetadataProviderService,DLaB.CrmSvcUtilExtensions" /connectionstring:"AuthType=OAuth;Username=mihails.simvulidi@pilsetacilvekiem.lv;Url=https://pilsetacilvekiem.api.crm4.dynamics.com;AppId=51f81489-12ee-4a9e-aaae-a2591f45987d;RedirectUri=app://58145b91-0c36-4500-8554-080854f2ac97/;TokenCacheStorePath=C:\Users\Mihails\AppData\Local\Temp\{bba94f33-cdc2-4ed2-9161-9b8bc593c537};LoginPrompt=Auto" 
+// Created via this command line: "C:\Users\mihai\AppData\Roaming\MscrmTools\XrmToolBox\Plugins\DLaB.EarlyBoundGenerator\crmsvcutil.exe" /namespace:"PC.PowerApps.Common.Entities.Dataverse" /SuppressGeneratedCodeAttribute /out:"C:\Users\mihai\source\repos\Participant-Management\PC.PowerApps\PC.PowerApps.Common\Entities\DataverseOptionSets.cs" /codecustomization:"DLaB.CrmSvcUtilExtensions.OptionSet.CustomizeCodeDomService,DLaB.CrmSvcUtilExtensions" /codegenerationservice:"DLaB.CrmSvcUtilExtensions.OptionSet.CustomCodeGenerationService,DLaB.CrmSvcUtilExtensions" /codewriterfilter:"DLaB.CrmSvcUtilExtensions.OptionSet.CodeWriterFilterService,DLaB.CrmSvcUtilExtensions" /namingservice:"DLaB.CrmSvcUtilExtensions.NamingService,DLaB.CrmSvcUtilExtensions" /metadataproviderservice:"DLaB.CrmSvcUtilExtensions.BaseMetadataProviderService,DLaB.CrmSvcUtilExtensions" /connectionstring:"AuthType=OAuth;Username=mihails.simvulidi@pilsetacilvekiem.lv;Url=https://pilsetacilvekiem.api.crm4.dynamics.com;AppId=51f81489-12ee-4a9e-aaae-a2591f45987d;RedirectUri=app://58145b91-0c36-4500-8554-080854f2ac97/;TokenCacheStorePath=C:\Users\mihai\AppData\Local\Temp\{b588a1f1-de1d-4fed-aaa5-35eb73ef746a};LoginPrompt=Auto" 
 //------------------------------------------------------------------------------
 
 namespace PC.PowerApps.Common.Entities.Dataverse
@@ -51,6 +51,10 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		CCRecipient = 3,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Chat Participant", 11)]
+		ChatParticipant = 12,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
 		[OptionSetMetadataAttribute("Customer", 10)]
 		Customer = 11,
 		
@@ -69,6 +73,10 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		[System.Runtime.Serialization.EnumMemberAttribute()]
 		[OptionSetMetadataAttribute("Regarding", 7)]
 		Regarding = 8,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Related", 12)]
+		Related = 13,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
 		[OptionSetMetadataAttribute("Required attendee", 4)]
@@ -618,6 +626,27 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 	}
 	
 	[System.Runtime.Serialization.DataContractAttribute()]
+	public enum organization_applicationbasedaccesscontrolmode
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("AuditMode", 2)]
+		AuditMode = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Disabled", 0)]
+		Disabled = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Enabled", 1)]
+		Enabled = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Enabled for roles", 3)]
+		Enabledforroles = 3,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
 	public enum Organization_CurrencyDisplayOption
 	{
 		
@@ -666,6 +695,69 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		[System.Runtime.Serialization.EnumMemberAttribute()]
 		[OptionSetMetadataAttribute("Number of Occurrences", 1)]
 		NumberofOccurrences = 2,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	public enum Organization_DesktopFlowRunActionLogsStatus
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Disabled", 2, null, "Power Automate Desktop Flow Run Action Logs are disabled.")]
+		Disabled = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Enabled", 0, null, "Power Automate Desktop Flow Run Action Logs are enabled.")]
+		Enabled = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("OnFailure", 1, null, "Power Automate Desktop Flow Run Action Logs are saved only on failure.")]
+		OnFailure = 1,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	public enum Organization_DesktopFlowRunActionLogVerbosity
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Custom", 2, null, "Power Automate Desktop Flow Run Action Logs Using Log Message Action and all Warn" +
+			"ing and Errors Action Logs.")]
+		Custom = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Debug", 1, null, "All Power Automate Desktop Flow Run Action Logs except Built-in Actions Logs.")]
+		Debug = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Error", 4, null, "Power Automate Desktop Flow Run Action Error Logs only.")]
+		Error = 4,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Full", 0, null, "All Power Automate Desktop Flow Run Action Logs are included.")]
+		Full = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Warning", 3, null, "Power Automate Desktop Flow Run Action Warning and Error Logs.")]
+		Warning = 3,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	public enum Organization_DesktopFlowRunActionLogVersion
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("AdditionalContext", 0, null, "Power Automate Desktop Flow Run Action Logs are stored in the Additional Context " +
+			"field of the Flow Session.")]
+		AdditionalContext = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("AdditionalContextAndFlowLogs", 2, null, "Power Automate Desktop Flow Run Action Logs are stored in the Additional Context " +
+			"field of the Flow Session and the Flow Logs Dataverse Entity.")]
+		AdditionalContextAndFlowLogs = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("FlowLogs", 1, null, "Power Automate Desktop Flow Run Action Logs are stored in the Flow Logs Dataverse" +
+			" Entity.")]
+		FlowLogs = 1,
 	}
 	
 	[System.Runtime.Serialization.DataContractAttribute()]
@@ -812,6 +904,27 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 	}
 	
 	[System.Runtime.Serialization.DataContractAttribute()]
+	public enum Organization_IpBasedStorageAccessSignatureMode
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("IP Binding and IP Firewall", 2)]
+		IPBindingandIPFirewall = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("IP Binding only", 0)]
+		IPBindingonly = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("IP Binding or IP Firewall", 3)]
+		IPBindingorIPFirewall = 3,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("IP Firewall only", 1)]
+		IPFirewallonly = 1,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
 	public enum Organization_ISVIntegrationCode
 	{
 		
@@ -859,6 +972,23 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		[System.Runtime.Serialization.EnumMemberAttribute()]
 		[OptionSetMetadataAttribute("Public", 0)]
 		Public = 0,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	public enum Organization_LegacyAppToggle
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Auto", 0)]
+		Auto = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Off", 2)]
+		Off = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("On", 1)]
+		On = 1,
 	}
 	
 	[System.Runtime.Serialization.DataContractAttribute()]
@@ -925,6 +1055,27 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 	}
 	
 	[System.Runtime.Serialization.DataContractAttribute()]
+	public enum Organization_ReleaseChannel
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Auto", 0)]
+		Auto = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Microsoft Inner channel", 2)]
+		MicrosoftInnerchannel = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Monthly channel", 1)]
+		Monthlychannel = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Semi-annual channel", 3)]
+		Semiannualchannel = 3,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
 	public enum Organization_ReportScriptErrors
 	{
 		
@@ -944,6 +1095,27 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		[OptionSetMetadataAttribute("No preference for sending an error report to Microsoft about Microsoft Dynamics 3" +
 			"65", 0)]
 		NopreferenceforsendinganerrorreporttoMicrosoftaboutMicrosoftDynamics365 = 0,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	public enum organization_SamesitemodeforSessionCookie
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Default", 0)]
+		Default = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Lax", 2)]
+		Lax = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("None", 1)]
+		None = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Strict", 3)]
+		Strict = 3,
 	}
 	
 	[System.Runtime.Serialization.DataContractAttribute()]
@@ -974,6 +1146,23 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		[System.Runtime.Serialization.EnumMemberAttribute()]
 		[OptionSetMetadataAttribute("Processing", 0)]
 		Processing = 1,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	public enum Organization_ValidationMode
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Block", 2)]
+		Block = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Off", 0)]
+		Off = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Warn", 1)]
+		Warn = 1,
 	}
 	
 	[System.Runtime.Serialization.DataContractAttribute()]
@@ -1163,6 +1352,191 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		[System.Runtime.Serialization.EnumMemberAttribute()]
 		[OptionSetMetadataAttribute("Pending", 0)]
 		Pending = 947970000,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	public enum powerpagelanguages
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Arabic", 0, "#0000ff")]
+		Arabic = 1025,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Basque - Basque", 1, "#0000ff")]
+		BasqueBasque = 1069,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Bulgarian - Bulgaria", 2, "#0000ff")]
+		BulgarianBulgaria = 1026,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Catalan - Catalan", 3, "#0000ff")]
+		CatalanCatalan = 1027,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Chinese - China", 4, "#0000ff")]
+		ChineseChina = 2052,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Chinese - Hong Kong SAR", 5, "#0000ff")]
+		ChineseHongKongSAR = 3076,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Chinese - Traditional", 6, "#0000ff")]
+		ChineseTraditional = 1028,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Croatian - Croatia", 7, "#0000ff")]
+		CroatianCroatia = 1050,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Czech - Czech Republic", 8, "#0000ff")]
+		CzechCzechRepublic = 1029,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Danish - Denmark", 9, "#0000ff")]
+		DanishDenmark = 1030,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Dutch - Netherlands", 10, "#0000ff")]
+		DutchNetherlands = 1043,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("English", 11, "#0000ff")]
+		English = 1033,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Estonian - Estonia", 12, "#0000ff")]
+		EstonianEstonia = 1061,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Finnish - Finland", 13, "#0000ff")]
+		FinnishFinland = 1035,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("French - France", 14, "#0000ff")]
+		FrenchFrance = 1036,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Galician - Spain", 15, "#0000ff")]
+		GalicianSpain = 1110,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("German - Germany", 16, "#0000ff")]
+		GermanGermany = 1031,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Greek - Greece", 17, "#0000ff")]
+		GreekGreece = 1032,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Hebrew", 18, "#0000ff")]
+		Hebrew = 1037,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Hindi - India", 19, "#0000ff")]
+		HindiIndia = 1081,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Hungarian - Hungary", 20, "#0000ff")]
+		HungarianHungary = 1038,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Indonesian - Indonesia", 21, "#0000ff")]
+		IndonesianIndonesia = 1057,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Italian - Italy", 22, "#0000ff")]
+		ItalianItaly = 1040,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Japanese - Japan", 23, "#0000ff")]
+		JapaneseJapan = 1041,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Kazakh - Kazakhstan", 24, "#0000ff")]
+		KazakhKazakhstan = 1087,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Korean - Korea", 25, "#0000ff")]
+		KoreanKorea = 1042,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Latvian - Latvia", 26, "#0000ff")]
+		LatvianLatvia = 1062,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Lithuanian - Lithuania", 27, "#0000ff")]
+		LithuanianLithuania = 1063,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Malay - Malaysia", 28, "#0000ff")]
+		MalayMalaysia = 1086,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Norwegian (Bokmål) - Norway", 29, "#0000ff")]
+		Norwegian_BokmlNorway = 1044,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Polish - Poland", 30, "#0000ff")]
+		PolishPoland = 1045,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Portuguese - Brazil", 31, "#0000ff")]
+		PortugueseBrazil = 1046,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Portuguese - Portugal", 32, "#0000ff")]
+		PortuguesePortugal = 2070,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Romanian - Romania", 33, "#0000ff")]
+		RomanianRomania = 1048,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Russian - Russia", 34, "#0000ff")]
+		RussianRussia = 1049,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Serbian (Cyrillic) - Serbia", 35, "#0000ff")]
+		Serbian_CyrillicSerbia = 3098,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Serbian (Latin) - Serbia", 36, "#0000ff")]
+		Serbian_LatinSerbia = 2074,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Slovak - Slovakia", 37, "#0000ff")]
+		SlovakSlovakia = 1051,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Slovenian - Slovenia", 38, "#0000ff")]
+		SlovenianSlovenia = 1060,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Spanish (Traditional Sort) - Spain", 39, "#0000ff")]
+		Spanish_TraditionalSortSpain = 3082,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Swedish - Sweden", 40, "#0000ff")]
+		SwedishSweden = 1053,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Thai - Thailand", 41, "#0000ff")]
+		ThaiThailand = 1054,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Turkish - Türkiye", 42, "#0000ff")]
+		TurkishTrkiye = 1055,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Ukrainian - Ukraine", 43, "#0000ff")]
+		UkrainianUkraine = 1058,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Vietnamese - Vietnam", 44, "#0000ff")]
+		VietnameseVietnam = 1066,
 	}
 	
 	[System.Runtime.Serialization.DataContractAttribute()]
@@ -1453,6 +1827,32 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 	}
 	
 	[System.Runtime.Serialization.DataContractAttribute()]
+	public enum SystemUser_SystemManagedUserType
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("C2 User", 1)]
+		C2User = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Entra User", 0)]
+		EntraUser = 0,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	public enum TransactionCurrency_CurrencyType
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Custom", 1)]
+		Custom = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("System", 0)]
+		System = 0,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
 	public enum TransactionCurrency_StatusCode
 	{
 		
@@ -1463,6 +1863,43 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		[System.Runtime.Serialization.EnumMemberAttribute()]
 		[OptionSetMetadataAttribute("Inactive", 1)]
 		Inactive = 2,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	public enum UserSettings_D365AutoInstallAttemptStatus
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Already installed", 2, null, "Dynamics 365 app is already installed in Teams")]
+		Alreadyinstalled = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Auto installed", 1, null, "Dynamics 365 App installed successfully")]
+		Autoinstalled = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("No Graph API", 6, null, "Graph API is not available for auto install")]
+		NoGraphAPI = 6,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("No Solution", 5, null, "D365 auto install solution is no available")]
+		NoSolution = 5,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Not attempted", 0)]
+		Notattempted = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Resource Disabled", 7, null, "Resource to call graph api is disabled by tenant")]
+		ResourceDisabled = 7,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Teams admin blocked", 3, null, "Teams admin blocked installing Dynamics 365 app")]
+		Teamsadminblocked = 3,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Unauthorized", 4, null, "Not authorized to execute auto install")]
+		Unauthorized = 4,
 	}
 	
 	[System.Runtime.Serialization.DataContractAttribute()]
@@ -1539,6 +1976,27 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		[System.Runtime.Serialization.EnumMemberAttribute()]
 		[OptionSetMetadataAttribute("No email messages", 4)]
 		Noemailmessages = 4,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	public enum UserSettings_ReleaseChannel
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Inner channel override", 3)]
+		Innerchanneloverride = 3,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Monthly channel override", 2)]
+		Monthlychanneloverride = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("None", 0)]
+		None = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Semi-annual channel override", 1)]
+		Semiannualchanneloverride = 1,
 	}
 	
 	[System.Runtime.Serialization.DataContractAttribute()]
@@ -1625,6 +2083,19 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 	}
 	
 	[System.Runtime.Serialization.DataContractAttribute()]
+	public enum aiinsightcard_Surface
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Table", 0, "#0000ff")]
+		Table = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Record", 1, "#0000ff")]
+		Record = 1,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
 	public enum appaction_ClientType
 	{
 		
@@ -1639,6 +2110,53 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		[System.Runtime.Serialization.EnumMemberAttribute()]
 		[OptionSetMetadataAttribute("Mail App", 2, "#0000ff")]
 		MailApp = 2,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	public enum card_Sizes
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Small", 0, "#0000ff")]
+		Small = 200000000,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Medium", 1, "#0000ff")]
+		Medium = 200000001,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Large", 2, "#0000ff")]
+		Large = 200000002,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	public enum credential_UsageType
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Connection", 0, null, "authorize this credential in connection", "connection")]
+		Connection = 280920000,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("DesktopScript", 1, null, "authorize this credential in power automate for desktop script", "DesktopScript")]
+		DesktopScript = 280920001,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Network", 2, null, "authorize this credential in power automate for network", "Network")]
+		Network = 280920002,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	public enum formmappingallowedoperations
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Create", 0)]
+		Create = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Update", 1)]
+		Update = 1,
 	}
 	
 	[System.Runtime.Serialization.DataContractAttribute()]

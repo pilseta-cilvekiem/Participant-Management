@@ -6,7 +6,7 @@
 //     Changes to this file may cause incorrect behavior and will be lost if
 //     the code is regenerated.
 // </auto-generated>
-// Created via this command line: "C:\Users\Mihails\AppData\Roaming\MscrmTools\XrmToolBox\Plugins\DLaB.EarlyBoundGenerator\crmsvcutil.exe" /namespace:"PC.PowerApps.Common.Entities.Dataverse" /SuppressGeneratedCodeAttribute /out:"C:\Users\Mihails\source\repos\Participant-Management\PC.PowerApps\PC.PowerApps.Common\Entities\DataverseEntities.cs" /servicecontextname:"ServiceContextBase" /codecustomization:"DLaB.CrmSvcUtilExtensions.Entity.CustomizeCodeDomService,DLaB.CrmSvcUtilExtensions" /codegenerationservice:"DLaB.CrmSvcUtilExtensions.Entity.CustomCodeGenerationService,DLaB.CrmSvcUtilExtensions" /codewriterfilter:"DLaB.CrmSvcUtilExtensions.Entity.CodeWriterFilterService,DLaB.CrmSvcUtilExtensions" /namingservice:"DLaB.CrmSvcUtilExtensions.NamingService,DLaB.CrmSvcUtilExtensions" /metadataproviderservice:"DLaB.CrmSvcUtilExtensions.Entity.MetadataProviderService,DLaB.CrmSvcUtilExtensions" /connectionstring:"AuthType=OAuth;Username=mihails.simvulidi@pilsetacilvekiem.lv;Url=https://pilsetacilvekiem.api.crm4.dynamics.com;AppId=51f81489-12ee-4a9e-aaae-a2591f45987d;RedirectUri=app://58145b91-0c36-4500-8554-080854f2ac97/;TokenCacheStorePath=C:\Users\Mihails\AppData\Local\Temp\{bba94f33-cdc2-4ed2-9161-9b8bc593c537};LoginPrompt=Auto" 
+// Created via this command line: "C:\Users\mihai\AppData\Roaming\MscrmTools\XrmToolBox\Plugins\DLaB.EarlyBoundGenerator\crmsvcutil.exe" /namespace:"PC.PowerApps.Common.Entities.Dataverse" /SuppressGeneratedCodeAttribute /out:"C:\Users\mihai\source\repos\Participant-Management\PC.PowerApps\PC.PowerApps.Common\Entities\DataverseEntities.cs" /servicecontextname:"ServiceContextBase" /codecustomization:"DLaB.CrmSvcUtilExtensions.Entity.CustomizeCodeDomService,DLaB.CrmSvcUtilExtensions" /codegenerationservice:"DLaB.CrmSvcUtilExtensions.Entity.CustomCodeGenerationService,DLaB.CrmSvcUtilExtensions" /codewriterfilter:"DLaB.CrmSvcUtilExtensions.Entity.CodeWriterFilterService,DLaB.CrmSvcUtilExtensions" /namingservice:"DLaB.CrmSvcUtilExtensions.NamingService,DLaB.CrmSvcUtilExtensions" /metadataproviderservice:"DLaB.CrmSvcUtilExtensions.Entity.MetadataProviderService,DLaB.CrmSvcUtilExtensions" /connectionstring:"AuthType=OAuth;Username=mihails.simvulidi@pilsetacilvekiem.lv;Url=https://pilsetacilvekiem.api.crm4.dynamics.com;AppId=51f81489-12ee-4a9e-aaae-a2591f45987d;RedirectUri=app://58145b91-0c36-4500-8554-080854f2ac97/;TokenCacheStorePath=C:\Users\mihai\AppData\Local\Temp\{b588a1f1-de1d-4fed-aaa5-35eb73ef746a};LoginPrompt=Auto" 
 //------------------------------------------------------------------------------
 
 [assembly: Microsoft.Xrm.Sdk.Client.ProxyTypesAssemblyAttribute()]
@@ -256,6 +256,46 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
+		/// The external id used when the party does not have an email address.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("externalid")]
+		public string ExternalId
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<string>("externalid");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("ExternalId");
+				this.SetAttributeValue("externalid", value);
+				this.OnPropertyChanged("ExternalId");
+			}
+		}
+		
+		/// <summary>
+		/// The external id type used when the party does not have an email address.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("externalidtype")]
+		public string ExternalIdType
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<string>("externalidtype");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("ExternalIdType");
+				this.SetAttributeValue("externalidtype", value);
+				this.OnPropertyChanged("ExternalIdType");
+			}
+		}
+		
+		/// <summary>
 		/// Type of instance of a recurring series.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("instancetypecode")]
@@ -357,6 +397,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<System.DateTime>>("scheduledstart");
+			}
+		}
+		
+		/// <summary>
+		/// The name of the party to be used when the party is not resolved to an entity.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("unresolvedpartyname")]
+		public string UnresolvedPartyName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<string>("unresolvedpartyname");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("UnresolvedPartyName");
+				this.SetAttributeValue("unresolvedpartyname", value);
+				this.OnPropertyChanged("UnresolvedPartyName");
 			}
 		}
 		
@@ -2708,6 +2768,566 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_confirmremovepassword")]
+		public System.Nullable<bool> adx_ConfirmRemovePassword
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("adx_confirmremovepassword");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("adx_ConfirmRemovePassword");
+				this.SetAttributeValue("adx_confirmremovepassword", value);
+				this.OnPropertyChanged("adx_ConfirmRemovePassword");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_createdbyipaddress")]
+		public string Adx_CreatedByIPAddress
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<string>("adx_createdbyipaddress");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("Adx_CreatedByIPAddress");
+				this.SetAttributeValue("adx_createdbyipaddress", value);
+				this.OnPropertyChanged("Adx_CreatedByIPAddress");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_createdbyusername")]
+		public string Adx_CreatedByUsername
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<string>("adx_createdbyusername");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("Adx_CreatedByUsername");
+				this.SetAttributeValue("adx_createdbyusername", value);
+				this.OnPropertyChanged("Adx_CreatedByUsername");
+			}
+		}
+		
+		/// <summary>
+		/// Shows the current count of failed password attempts for the contact.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_identity_accessfailedcount")]
+		public System.Nullable<int> adx_identity_accessfailedcount
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("adx_identity_accessfailedcount");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("adx_identity_accessfailedcount");
+				this.SetAttributeValue("adx_identity_accessfailedcount", value);
+				this.OnPropertyChanged("adx_identity_accessfailedcount");
+			}
+		}
+		
+		/// <summary>
+		/// Determines if the email is confirmed by the contact.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_identity_emailaddress1confirmed")]
+		public System.Nullable<bool> adx_identity_emailaddress1confirmed
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("adx_identity_emailaddress1confirmed");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("adx_identity_emailaddress1confirmed");
+				this.SetAttributeValue("adx_identity_emailaddress1confirmed", value);
+				this.OnPropertyChanged("adx_identity_emailaddress1confirmed");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates the last date and time the user successfully signed in to a portal.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_identity_lastsuccessfullogin")]
+		public System.Nullable<System.DateTime> adx_identity_lastsuccessfullogin
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("adx_identity_lastsuccessfullogin");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("adx_identity_lastsuccessfullogin");
+				this.SetAttributeValue("adx_identity_lastsuccessfullogin", value);
+				this.OnPropertyChanged("adx_identity_lastsuccessfullogin");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates that the contact can no longer sign in to the portal using the local account.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_identity_locallogindisabled")]
+		public System.Nullable<bool> adx_identity_locallogindisabled
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("adx_identity_locallogindisabled");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("adx_identity_locallogindisabled");
+				this.SetAttributeValue("adx_identity_locallogindisabled", value);
+				this.OnPropertyChanged("adx_identity_locallogindisabled");
+			}
+		}
+		
+		/// <summary>
+		/// Determines if this contact will track failed access attempts and become locked after too many failed attempts. To prevent the contact from becoming locked, you can disable this setting.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_identity_lockoutenabled")]
+		public System.Nullable<bool> adx_identity_lockoutenabled
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("adx_identity_lockoutenabled");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("adx_identity_lockoutenabled");
+				this.SetAttributeValue("adx_identity_lockoutenabled", value);
+				this.OnPropertyChanged("adx_identity_lockoutenabled");
+			}
+		}
+		
+		/// <summary>
+		/// Shows the moment in time when the locked contact becomes unlocked again.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_identity_lockoutenddate")]
+		public System.Nullable<System.DateTime> adx_identity_lockoutenddate
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("adx_identity_lockoutenddate");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("adx_identity_lockoutenddate");
+				this.SetAttributeValue("adx_identity_lockoutenddate", value);
+				this.OnPropertyChanged("adx_identity_lockoutenddate");
+			}
+		}
+		
+		/// <summary>
+		/// Determines if web authentication is enabled for the contact.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_identity_logonenabled")]
+		public System.Nullable<bool> adx_identity_logonenabled
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("adx_identity_logonenabled");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("adx_identity_logonenabled");
+				this.SetAttributeValue("adx_identity_logonenabled", value);
+				this.OnPropertyChanged("adx_identity_logonenabled");
+			}
+		}
+		
+		/// <summary>
+		/// Determines if the phone number is confirmed by the contact.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_identity_mobilephoneconfirmed")]
+		public System.Nullable<bool> adx_identity_mobilephoneconfirmed
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("adx_identity_mobilephoneconfirmed");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("adx_identity_mobilephoneconfirmed");
+				this.SetAttributeValue("adx_identity_mobilephoneconfirmed", value);
+				this.OnPropertyChanged("adx_identity_mobilephoneconfirmed");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_identity_newpassword")]
+		public string adx_identity_newpassword
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<string>("adx_identity_newpassword");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("adx_identity_newpassword");
+				this.SetAttributeValue("adx_identity_newpassword", value);
+				this.OnPropertyChanged("adx_identity_newpassword");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_identity_passwordhash")]
+		public string adx_identity_passwordhash
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<string>("adx_identity_passwordhash");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("adx_identity_passwordhash");
+				this.SetAttributeValue("adx_identity_passwordhash", value);
+				this.OnPropertyChanged("adx_identity_passwordhash");
+			}
+		}
+		
+		/// <summary>
+		/// A token used to manage the web authentication session.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_identity_securitystamp")]
+		public string adx_identity_securitystamp
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<string>("adx_identity_securitystamp");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("adx_identity_securitystamp");
+				this.SetAttributeValue("adx_identity_securitystamp", value);
+				this.OnPropertyChanged("adx_identity_securitystamp");
+			}
+		}
+		
+		/// <summary>
+		/// Determines if two-factor authentication is enabled for the contact.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_identity_twofactorenabled")]
+		public System.Nullable<bool> adx_identity_twofactorenabled
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("adx_identity_twofactorenabled");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("adx_identity_twofactorenabled");
+				this.SetAttributeValue("adx_identity_twofactorenabled", value);
+				this.OnPropertyChanged("adx_identity_twofactorenabled");
+			}
+		}
+		
+		/// <summary>
+		/// Shows the user identity for local web authentication.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_identity_username")]
+		public string adx_identity_username
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<string>("adx_identity_username");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("adx_identity_username");
+				this.SetAttributeValue("adx_identity_username", value);
+				this.OnPropertyChanged("adx_identity_username");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_modifiedbyipaddress")]
+		public string Adx_ModifiedByIPAddress
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<string>("adx_modifiedbyipaddress");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("Adx_ModifiedByIPAddress");
+				this.SetAttributeValue("adx_modifiedbyipaddress", value);
+				this.OnPropertyChanged("Adx_ModifiedByIPAddress");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_modifiedbyusername")]
+		public string Adx_ModifiedByUsername
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<string>("adx_modifiedbyusername");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("Adx_ModifiedByUsername");
+				this.SetAttributeValue("adx_modifiedbyusername", value);
+				this.OnPropertyChanged("Adx_ModifiedByUsername");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_organizationname")]
+		public string Adx_OrganizationName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<string>("adx_organizationname");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("Adx_OrganizationName");
+				this.SetAttributeValue("adx_organizationname", value);
+				this.OnPropertyChanged("Adx_OrganizationName");
+			}
+		}
+		
+		/// <summary>
+		/// User’s preferred portal LCID
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_preferredlcid")]
+		public System.Nullable<int> adx_preferredlcid
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("adx_preferredlcid");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("adx_preferredlcid");
+				this.SetAttributeValue("adx_preferredlcid", value);
+				this.OnPropertyChanged("adx_preferredlcid");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_profilealert")]
+		public System.Nullable<bool> adx_profilealert
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("adx_profilealert");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("adx_profilealert");
+				this.SetAttributeValue("adx_profilealert", value);
+				this.OnPropertyChanged("adx_profilealert");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_profilealertdate")]
+		public System.Nullable<System.DateTime> adx_profilealertdate
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("adx_profilealertdate");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("adx_profilealertdate");
+				this.SetAttributeValue("adx_profilealertdate", value);
+				this.OnPropertyChanged("adx_profilealertdate");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_profilealertinstructions")]
+		public string adx_profilealertinstructions
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<string>("adx_profilealertinstructions");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("adx_profilealertinstructions");
+				this.SetAttributeValue("adx_profilealertinstructions", value);
+				this.OnPropertyChanged("adx_profilealertinstructions");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_profileisanonymous")]
+		public System.Nullable<bool> Adx_ProfileIsAnonymous
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("adx_profileisanonymous");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("Adx_ProfileIsAnonymous");
+				this.SetAttributeValue("adx_profileisanonymous", value);
+				this.OnPropertyChanged("Adx_ProfileIsAnonymous");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_profilelastactivity")]
+		public System.Nullable<System.DateTime> Adx_ProfileLastActivity
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("adx_profilelastactivity");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("Adx_ProfileLastActivity");
+				this.SetAttributeValue("adx_profilelastactivity", value);
+				this.OnPropertyChanged("Adx_ProfileLastActivity");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_profilemodifiedon")]
+		public System.Nullable<System.DateTime> adx_profilemodifiedon
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("adx_profilemodifiedon");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("adx_profilemodifiedon");
+				this.SetAttributeValue("adx_profilemodifiedon", value);
+				this.OnPropertyChanged("adx_profilemodifiedon");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_publicprofilecopy")]
+		public string adx_PublicProfileCopy
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<string>("adx_publicprofilecopy");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("adx_PublicProfileCopy");
+				this.SetAttributeValue("adx_publicprofilecopy", value);
+				this.OnPropertyChanged("adx_PublicProfileCopy");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_timezone")]
+		public System.Nullable<int> Adx_TimeZone
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("adx_timezone");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("Adx_TimeZone");
+				this.SetAttributeValue("adx_timezone", value);
+				this.OnPropertyChanged("Adx_TimeZone");
+			}
+		}
+		
+		/// <summary>
 		/// For system use only.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("aging30")]
@@ -4133,6 +4753,126 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 				this.OnPropertyChanging("ModifiedOnBehalfBy");
 				this.SetAttributeValue("modifiedonbehalfby", value);
 				this.OnPropertyChanged("ModifiedOnBehalfBy");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier for Account associated with Contact.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("msa_managingpartnerid")]
+		public Microsoft.Xrm.Sdk.EntityReference msa_managingpartnerid
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("msa_managingpartnerid");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("msa_managingpartnerid");
+				this.SetAttributeValue("msa_managingpartnerid", value);
+				this.OnPropertyChanged("msa_managingpartnerid");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates that the contact has opted out of web tracking.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("msdyn_disablewebtracking")]
+		public System.Nullable<bool> msdyn_disablewebtracking
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("msdyn_disablewebtracking");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("msdyn_disablewebtracking");
+				this.SetAttributeValue("msdyn_disablewebtracking", value);
+				this.OnPropertyChanged("msdyn_disablewebtracking");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates that the contact is considered a minor in their jurisdiction.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("msdyn_isminor")]
+		public System.Nullable<bool> msdyn_isminor
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("msdyn_isminor");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("msdyn_isminor");
+				this.SetAttributeValue("msdyn_isminor", value);
+				this.OnPropertyChanged("msdyn_isminor");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates that the contact is considered a minor in their jurisdiction and has parental consent.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("msdyn_isminorwithparentalconsent")]
+		public System.Nullable<bool> msdyn_isminorwithparentalconsent
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("msdyn_isminorwithparentalconsent");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("msdyn_isminorwithparentalconsent");
+				this.SetAttributeValue("msdyn_isminorwithparentalconsent", value);
+				this.OnPropertyChanged("msdyn_isminorwithparentalconsent");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates the date and time that the person agreed to the portal terms and conditions.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("msdyn_portaltermsagreementdate")]
+		public System.Nullable<System.DateTime> msdyn_portaltermsagreementdate
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("msdyn_portaltermsagreementdate");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("msdyn_portaltermsagreementdate");
+				this.SetAttributeValue("msdyn_portaltermsagreementdate", value);
+				this.OnPropertyChanged("msdyn_portaltermsagreementdate");
+			}
+		}
+		
+		/// <summary>
+		/// User’s preferred portal language
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("mspp_userpreferredlcid")]
+		public virtual powerpagelanguages? mspp_userpreferredlcid
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return ((powerpagelanguages?)(EntityOptionSetEnum.GetEnum(this, "mspp_userpreferredlcid")));
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("mspp_userpreferredlcid");
+				this.SetAttributeValue("mspp_userpreferredlcid", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
+				this.OnPropertyChanged("mspp_userpreferredlcid");
 			}
 		}
 		
@@ -6204,7 +6944,27 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
-		/// Shows how an email is matched to an existing email in Microsoft Dynamics 365. For system use only.
+		/// Indicates if the subject changed compared to the subject of the correlated email
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("correlatedsubjectchanged")]
+		public System.Nullable<bool> correlatedsubjectchanged
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("correlatedsubjectchanged");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("correlatedsubjectchanged");
+				this.SetAttributeValue("correlatedsubjectchanged", value);
+				this.OnPropertyChanged("correlatedsubjectchanged");
+			}
+		}
+		
+		/// <summary>
+		/// Shows how an email is correlated to an existing email in Microsoft Dynamics 365. XHeader and CustomCorrelation are not used. For system use only.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("correlationmethod")]
 		public virtual Email_CorrelationMethod? CorrelationMethod
@@ -6359,6 +7119,32 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 				this.OnPropertyChanging("Description");
 				this.SetAttributeValue("description", value);
 				this.OnPropertyChanged("Description");
+			}
+		}
+		
+		/// <summary>
+		/// File that contains description content.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("descriptionblobid")]
+		public object DescriptionBlobId
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<object>("descriptionblobid");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("descriptionblobid_name")]
+		public string DescriptionBlobId_Name
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<string>("descriptionblobid_name");
 			}
 		}
 		
@@ -6591,6 +7377,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
+		/// Contains a set of internet headers associated to the email message in json format
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("internetmessageheaders")]
+		public string InternetMessageHeaders
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<string>("internetmessageheaders");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("InternetMessageHeaders");
+				this.SetAttributeValue("internetmessageheaders", value);
+				this.OnPropertyChanged("InternetMessageHeaders");
+			}
+		}
+		
+		/// <summary>
 		/// Information regarding whether the email activity was billed as part of resolving a case.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isbilled")]
@@ -6607,6 +7413,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 				this.OnPropertyChanging("IsBilled");
 				this.SetAttributeValue("isbilled", value);
 				this.OnPropertyChanged("IsBilled");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates if the sender of the email is unresolved in case of multiple match
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isduplicatesenderunresolved")]
+		public System.Nullable<bool> IsDuplicateSenderUnresolved
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("isduplicatesenderunresolved");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("IsDuplicateSenderUnresolved");
+				this.SetAttributeValue("isduplicatesenderunresolved", value);
+				this.OnPropertyChanged("IsDuplicateSenderUnresolved");
 			}
 		}
 		
@@ -7002,6 +7828,19 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
+		/// For internal use only.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("parentsensitivitylabelid")]
+		public System.Nullable<System.Guid> ParentSensitivityLabelId
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("parentsensitivitylabelid");
+			}
+		}
+		
+		/// <summary>
 		/// 
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("pc_category")]
@@ -7131,6 +7970,42 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 				this.OnPropertyChanging("RegardingObjectId");
 				this.SetAttributeValue("regardingobjectid", value);
 				this.OnPropertyChanged("RegardingObjectId");
+			}
+		}
+		
+		/// <summary>
+		/// Enter the related records for the email.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("related")]
+		public System.Collections.Generic.IEnumerable<PC.PowerApps.Common.Entities.Dataverse.ActivityParty> related
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				Microsoft.Xrm.Sdk.EntityCollection collection = this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityCollection>("related");
+				if (((collection != null) 
+							&& (collection.Entities != null)))
+				{
+					return System.Linq.Enumerable.Select<Microsoft.Xrm.Sdk.Entity, PC.PowerApps.Common.Entities.Dataverse.ActivityParty>(collection.Entities, e => e.ToEntity<PC.PowerApps.Common.Entities.Dataverse.ActivityParty>());
+				}
+				else
+				{
+					return null;
+				}
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("related");
+				if ((value == null))
+				{
+					this.SetAttributeValue("related", value);
+				}
+				else
+				{
+					this.SetAttributeValue("related", new Microsoft.Xrm.Sdk.EntityCollection(new System.Collections.Generic.List<Microsoft.Xrm.Sdk.Entity>(value)));
+				}
+				this.OnPropertyChanged("related");
 			}
 		}
 		
@@ -7283,6 +8158,46 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 			get
 			{
 				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("sendersaccount");
+			}
+		}
+		
+		/// <summary>
+		/// The sensitivity label assigned to the Email.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sensitivitylabelid")]
+		public Microsoft.Xrm.Sdk.EntityReference SensitivityLabelId
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("sensitivitylabelid");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("SensitivityLabelId");
+				this.SetAttributeValue("sensitivitylabelid", value);
+				this.OnPropertyChanged("SensitivityLabelId");
+			}
+		}
+		
+		/// <summary>
+		/// For internal use only.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sensitivitylabelinfo")]
+		public string SensitivityLabelInfo
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<string>("sensitivitylabelinfo");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("SensitivityLabelInfo");
+				this.SetAttributeValue("sensitivitylabelinfo", value);
+				this.OnPropertyChanged("SensitivityLabelInfo");
 			}
 		}
 		
@@ -8128,6 +9043,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
+		/// Whether to show only activities configured in this app or all activities in the 'New activity' button.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("activitytypefilterv2")]
+		public System.Nullable<bool> ActivityTypeFilterV2
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("activitytypefilterv2");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("ActivityTypeFilterV2");
+				this.SetAttributeValue("activitytypefilterv2", value);
+				this.OnPropertyChanged("ActivityTypeFilterV2");
+			}
+		}
+		
+		/// <summary>
 		/// Flag to indicate if the display column options on a view in model-driven apps is enabled
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("advancedcolumneditorenabled")]
@@ -8208,6 +9143,46 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
+		/// Enables advanced lookup in grid edit filter panel
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("advancedlookupineditfilter")]
+		public System.Nullable<int> AdvancedLookupInEditFilter
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("advancedlookupineditfilter");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("AdvancedLookupInEditFilter");
+				this.SetAttributeValue("advancedlookupineditfilter", value);
+				this.OnPropertyChanged("AdvancedLookupInEditFilter");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates whether AI Prompts feature is enabled.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("aipromptsenabled")]
+		public System.Nullable<bool> AiPromptsEnabled
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("aipromptsenabled");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("AiPromptsEnabled");
+				this.SetAttributeValue("aipromptsenabled", value);
+				this.OnPropertyChanged("AiPromptsEnabled");
+			}
+		}
+		
+		/// <summary>
 		/// Indicates whether background address book synchronization in Microsoft Office Outlook is allowed.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("allowaddressbooksyncs")]
@@ -8224,6 +9199,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 				this.OnPropertyChanging("AllowAddressBookSyncs");
 				this.SetAttributeValue("allowaddressbooksyncs", value);
 				this.OnPropertyChanged("AllowAddressBookSyncs");
+			}
+		}
+		
+		/// <summary>
+		/// Information that specifies whether all application users are allowed to access the environment
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("allowapplicationuseraccess")]
+		public System.Nullable<bool> AllowApplicationUserAccess
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("allowapplicationuseraccess");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("AllowApplicationUserAccess");
+				this.SetAttributeValue("allowapplicationuseraccess", value);
+				this.OnPropertyChanged("AllowApplicationUserAccess");
 			}
 		}
 		
@@ -8308,6 +9303,146 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
+		/// Information on whether connectors on power fx actions is enabled.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("allowconnectorsonpowerfxactions")]
+		public System.Nullable<bool> AllowConnectorsOnPowerFXActions
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("allowconnectorsonpowerfxactions");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("AllowConnectorsOnPowerFXActions");
+				this.SetAttributeValue("allowconnectorsonpowerfxactions", value);
+				this.OnPropertyChanged("AllowConnectorsOnPowerFXActions");
+			}
+		}
+		
+		/// <summary>
+		/// Information that specifies the Applications that are in allow list for the accessing DV resources.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("allowedapplicationsfordvaccess")]
+		public string AllowedApplicationsForDVAccess
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<string>("allowedapplicationsfordvaccess");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("AllowedApplicationsForDVAccess");
+				this.SetAttributeValue("allowedapplicationsfordvaccess", value);
+				this.OnPropertyChanged("AllowedApplicationsForDVAccess");
+			}
+		}
+		
+		/// <summary>
+		/// Information that specifies the range of IP addresses that are in allow list for the firewall.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("allowediprangeforfirewall")]
+		public string AllowedIpRangeForFirewall
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<string>("allowediprangeforfirewall");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("AllowedIpRangeForFirewall");
+				this.SetAttributeValue("allowediprangeforfirewall", value);
+				this.OnPropertyChanged("AllowedIpRangeForFirewall");
+			}
+		}
+		
+		/// <summary>
+		/// Information that specifies the range of IP addresses that are in allowed list for generating the SAS URIs.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("allowediprangeforstorageaccesssignatures")]
+		public string AllowedIpRangeForStorageAccessSignatures
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<string>("allowediprangeforstorageaccesssignatures");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("AllowedIpRangeForStorageAccessSignatures");
+				this.SetAttributeValue("allowediprangeforstorageaccesssignatures", value);
+				this.OnPropertyChanged("AllowedIpRangeForStorageAccessSignatures");
+			}
+		}
+		
+		/// <summary>
+		/// Specifies list of allowed IP addresses for firewall.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("allowedlistofiprangesforfirewall")]
+		public string AllowedListOfIpRangesForFirewall
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<string>("allowedlistofiprangesforfirewall");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("AllowedListOfIpRangesForFirewall");
+				this.SetAttributeValue("allowedlistofiprangesforfirewall", value);
+				this.OnPropertyChanged("AllowedListOfIpRangesForFirewall");
+			}
+		}
+		
+		/// <summary>
+		/// Allow upload or download of certain mime types.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("allowedmimetypes")]
+		public string AllowedMimeTypes
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<string>("allowedmimetypes");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("AllowedMimeTypes");
+				this.SetAttributeValue("allowedmimetypes", value);
+				this.OnPropertyChanged("AllowedMimeTypes");
+			}
+		}
+		
+		/// <summary>
+		/// Information that specifies the List of Service Tags that should be allowed by the firewall.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("allowedservicetagsforfirewall")]
+		public string AllowedServiceTagsForFirewall
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<string>("allowedservicetagsforfirewall");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("AllowedServiceTagsForFirewall");
+				this.SetAttributeValue("allowedservicetagsforfirewall", value);
+				this.OnPropertyChanged("AllowedServiceTagsForFirewall");
+			}
+		}
+		
+		/// <summary>
 		/// Indicates whether auditing of changes to entity is allowed when no attributes have changed.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("allowentityonlyaudit")]
@@ -8324,6 +9459,46 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 				this.OnPropertyChanging("AllowEntityOnlyAudit");
 				this.SetAttributeValue("allowentityonlyaudit", value);
 				this.OnPropertyChanged("AllowEntityOnlyAudit");
+			}
+		}
+		
+		/// <summary>
+		/// Enables ends-with searches in grids with the use of a leading wildcard on all tables in the environment
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("allowleadingwildcardsingridsearch")]
+		public System.Nullable<bool> AllowLeadingWildcardsInGridSearch
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("allowleadingwildcardsingridsearch");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("AllowLeadingWildcardsInGridSearch");
+				this.SetAttributeValue("allowleadingwildcardsingridsearch", value);
+				this.OnPropertyChanged("AllowLeadingWildcardsInGridSearch");
+			}
+		}
+		
+		/// <summary>
+		/// Enables ends-with searches in grids with the use of a leading wildcard on all tables in the environment
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("allowleadingwildcardsinquickfind")]
+		public System.Nullable<int> AllowLeadingWildcardsInQuickFind
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("allowleadingwildcardsinquickfind");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("AllowLeadingWildcardsInQuickFind");
+				this.SetAttributeValue("allowleadingwildcardsinquickfind", value);
+				this.OnPropertyChanged("AllowLeadingWildcardsInQuickFind");
 			}
 		}
 		
@@ -8384,6 +9559,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 				this.OnPropertyChanging("AllowMarketingEmailExecution");
 				this.SetAttributeValue("allowmarketingemailexecution", value);
 				this.OnPropertyChanged("AllowMarketingEmailExecution");
+			}
+		}
+		
+		/// <summary>
+		/// Information that specifies whether Microsoft Trusted Service Tags are allowed
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("allowmicrosofttrustedservicetags")]
+		public System.Nullable<bool> AllowMicrosoftTrustedServiceTags
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("allowmicrosofttrustedservicetags");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("AllowMicrosoftTrustedServiceTags");
+				this.SetAttributeValue("allowmicrosofttrustedservicetags", value);
+				this.OnPropertyChanged("AllowMicrosoftTrustedServiceTags");
 			}
 		}
 		
@@ -8528,6 +9723,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
+		/// Warning : Allowing  Virtual Entity plugin execution on nested pipeline does not offer transactional support. i.e. if call in native entity pipeline fails, then virtual entity operation will not be reverted.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("allowvirtualentitypluginexecutiononnestedpipeline")]
+		public System.Nullable<bool> AllowVirtualEntityPluginExecutionOnNestedPipeline
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("allowvirtualentitypluginexecutiononnestedpipeline");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("AllowVirtualEntityPluginExecutionOnNestedPipeline");
+				this.SetAttributeValue("allowvirtualentitypluginexecutiononnestedpipeline", value);
+				this.OnPropertyChanged("AllowVirtualEntityPluginExecutionOnNestedPipeline");
+			}
+		}
+		
+		/// <summary>
 		/// Indicates whether Web-based export of grids to Microsoft Office Excel is allowed.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("allowwebexcelexport")]
@@ -8588,6 +9803,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
+		/// Application Based Access Control Mode. 0 is Disabled, 1 is audit mode , 2 is enforcement mode
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("applicationbasedaccesscontrolmode")]
+		public virtual organization_applicationbasedaccesscontrolmode? ApplicationBasedAccessControlMode
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return ((organization_applicationbasedaccesscontrolmode?)(EntityOptionSetEnum.GetEnum(this, "applicationbasedaccesscontrolmode")));
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("ApplicationBasedAccessControlMode");
+				this.SetAttributeValue("applicationbasedaccesscontrolmode", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
+				this.OnPropertyChanged("ApplicationBasedAccessControlMode");
+			}
+		}
+		
+		/// <summary>
 		/// Information on whether rich editing experience for Appointment is enabled.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("appointmentricheditorexperience")]
@@ -8628,6 +9863,66 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
+		/// Whether Teams meetings experience for appointments is enabled.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("appointmentwithteamsmeetingv2")]
+		public System.Nullable<bool> AppointmentWithTeamsMeetingV2
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("appointmentwithteamsmeetingv2");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("AppointmentWithTeamsMeetingV2");
+				this.SetAttributeValue("appointmentwithteamsmeetingv2", value);
+				this.OnPropertyChanged("AppointmentWithTeamsMeetingV2");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates whether Power Automate Automation Center preview features will be available for all users in this organization.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("areautomationcenterpreviewfeaturesenabled")]
+		public System.Nullable<bool> AreAutomationCenterPreviewFeaturesEnabled
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("areautomationcenterpreviewfeaturesenabled");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("AreAutomationCenterPreviewFeaturesEnabled");
+				this.SetAttributeValue("areautomationcenterpreviewfeaturesenabled", value);
+				this.OnPropertyChanged("AreAutomationCenterPreviewFeaturesEnabled");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates whether Process Insights Preview features are enabled in this organization.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("areprocessinsightspreviewfeaturesenabled")]
+		public System.Nullable<bool> AreProcessInsightsPreviewFeaturesEnabled
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("areprocessinsightspreviewfeaturesenabled");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("AreProcessInsightsPreviewFeaturesEnabled");
+				this.SetAttributeValue("areprocessinsightspreviewfeaturesenabled", value);
+				this.OnPropertyChanged("AreProcessInsightsPreviewFeaturesEnabled");
+			}
+		}
+		
+		/// <summary>
 		/// Audit Retention Period settings stored in Organization Database.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("auditretentionperiod")]
@@ -8664,6 +9959,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 				this.OnPropertyChanging("AuditRetentionPeriodV2");
 				this.SetAttributeValue("auditretentionperiodv2", value);
 				this.OnPropertyChanged("AuditRetentionPeriodV2");
+			}
+		}
+		
+		/// <summary>
+		/// Audit Settings of the organization
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("auditsettings")]
+		public string AuditSettings
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<string>("auditsettings");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("AuditSettings");
+				this.SetAttributeValue("auditsettings", value);
+				this.OnPropertyChanged("AuditSettings");
 			}
 		}
 		
@@ -8814,6 +10129,66 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
+		/// Enable this feature to prevent makers from accessing and downloading session transcripts
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("blockaccesstosessiontranscriptsforcopilotstudio")]
+		public System.Nullable<bool> BlockAccessToSessionTranscriptsForCopilotStudio
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("blockaccesstosessiontranscriptsforcopilotstudio");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("BlockAccessToSessionTranscriptsForCopilotStudio");
+				this.SetAttributeValue("blockaccesstosessiontranscriptsforcopilotstudio", value);
+				this.OnPropertyChanged("BlockAccessToSessionTranscriptsForCopilotStudio");
+			}
+		}
+		
+		/// <summary>
+		/// Prevent makers from allowing end-users to use their credentials during authentication to use connectors, actions, flows, and triggers that are connected to an agent
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("blockcopilotauthorauthentication")]
+		public System.Nullable<bool> BlockCopilotAuthorAuthentication
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("blockcopilotauthorauthentication");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("BlockCopilotAuthorAuthentication");
+				this.SetAttributeValue("blockcopilotauthorauthentication", value);
+				this.OnPropertyChanged("BlockCopilotAuthorAuthentication");
+			}
+		}
+		
+		/// <summary>
+		/// Information that specifies the Applications that are in block list for the accessing DV resources.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("blockedapplicationsfordvaccess")]
+		public string BlockedApplicationsForDVAccess
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<string>("blockedapplicationsfordvaccess");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("BlockedApplicationsForDVAccess");
+				this.SetAttributeValue("blockedapplicationsfordvaccess", value);
+				this.OnPropertyChanged("BlockedApplicationsForDVAccess");
+			}
+		}
+		
+		/// <summary>
 		/// Prevent upload or download of certain attachment types that are considered dangerous.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("blockedattachments")]
@@ -8830,6 +10205,46 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 				this.OnPropertyChanging("BlockedAttachments");
 				this.SetAttributeValue("blockedattachments", value);
 				this.OnPropertyChanged("BlockedAttachments");
+			}
+		}
+		
+		/// <summary>
+		/// Prevent upload or download of certain mime types that are considered dangerous.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("blockedmimetypes")]
+		public string BlockedMimeTypes
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<string>("blockedmimetypes");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("BlockedMimeTypes");
+				this.SetAttributeValue("blockedmimetypes", value);
+				this.OnPropertyChanged("BlockedMimeTypes");
+			}
+		}
+		
+		/// <summary>
+		/// Enable this feature to block access to session transcripts and conversational transcripts from being written to Dataverse for an individual environment
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("blocktranscriptrecordingforcopilotstudio")]
+		public System.Nullable<bool> BlockTranscriptRecordingForCopilotStudio
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("blocktranscriptrecordingforcopilotstudio");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("BlockTranscriptRecordingForCopilotStudio");
+				this.SetAttributeValue("blocktranscriptrecordingforcopilotstudio", value);
+				this.OnPropertyChanged("BlockTranscriptRecordingForCopilotStudio");
 			}
 		}
 		
@@ -9074,7 +10489,7 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
-		/// CSP Policy configuration for Canvas apps.
+		/// Content Security Policy configuration for Canvas apps.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("contentsecuritypolicyconfigurationforcanvas")]
 		public string ContentSecurityPolicyConfigurationForCanvas
@@ -9090,6 +10505,46 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 				this.OnPropertyChanging("ContentSecurityPolicyConfigurationForCanvas");
 				this.SetAttributeValue("contentsecuritypolicyconfigurationforcanvas", value);
 				this.OnPropertyChanged("ContentSecurityPolicyConfigurationForCanvas");
+			}
+		}
+		
+		/// <summary>
+		/// Content Security Policy Options.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("contentsecuritypolicyoptions")]
+		public System.Nullable<int> ContentSecurityPolicyOptions
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("contentsecuritypolicyoptions");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("ContentSecurityPolicyOptions");
+				this.SetAttributeValue("contentsecuritypolicyoptions", value);
+				this.OnPropertyChanged("ContentSecurityPolicyOptions");
+			}
+		}
+		
+		/// <summary>
+		/// Content Security Policy Report Uri.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("contentsecuritypolicyreporturi")]
+		public string ContentSecurityPolicyReportUri
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<string>("contentsecuritypolicyreporturi");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("ContentSecurityPolicyReportUri");
+				this.SetAttributeValue("contentsecuritypolicyreporturi", value);
+				this.OnPropertyChanged("ContentSecurityPolicyReportUri");
 			}
 		}
 		
@@ -9536,6 +10991,46 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
+		/// Number of days before we migrate email description to blob.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("daysbeforeemaildescriptionismigrated")]
+		public System.Nullable<int> DaysBeforeEmailDescriptionIsMigrated
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("daysbeforeemaildescriptionismigrated");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("DaysBeforeEmailDescriptionIsMigrated");
+				this.SetAttributeValue("daysbeforeemaildescriptionismigrated", value);
+				this.OnPropertyChanged("DaysBeforeEmailDescriptionIsMigrated");
+			}
+		}
+		
+		/// <summary>
+		/// Days of inactivity before sync is disabled for a Teams Chat.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("daysbeforeinactiveteamschatsyncdisabled")]
+		public System.Nullable<int> DaysBeforeInactiveTeamsChatSyncDisabled
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("daysbeforeinactiveteamschatsyncdisabled");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("DaysBeforeInactiveTeamsChatSyncDisabled");
+				this.SetAttributeValue("daysbeforeinactiveteamschatsyncdisabled", value);
+				this.OnPropertyChanged("DaysBeforeInactiveTeamsChatSyncDisabled");
+			}
+		}
+		
+		/// <summary>
 		/// The maximum value for the Mobile Offline setting Days since record last modified
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("dayssincerecordlastmodifiedmaxvalue")]
@@ -9769,6 +11264,86 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
+		/// Default time to live in minutes for new desktop flow queue log records.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("desktopflowqueuelogsttlinminutes")]
+		public System.Nullable<int> DesktopFlowQueueLogsTtlInMinutes
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("desktopflowqueuelogsttlinminutes");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("DesktopFlowQueueLogsTtlInMinutes");
+				this.SetAttributeValue("desktopflowqueuelogsttlinminutes", value);
+				this.OnPropertyChanged("DesktopFlowQueueLogsTtlInMinutes");
+			}
+		}
+		
+		/// <summary>
+		/// Toggle the activation of the Power Automate Desktop Flow run action logs.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("desktopflowrunactionlogsstatus")]
+		public virtual Organization_DesktopFlowRunActionLogsStatus? DesktopFlowRunActionLogsStatus
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return ((Organization_DesktopFlowRunActionLogsStatus?)(EntityOptionSetEnum.GetEnum(this, "desktopflowrunactionlogsstatus")));
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("DesktopFlowRunActionLogsStatus");
+				this.SetAttributeValue("desktopflowrunactionlogsstatus", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
+				this.OnPropertyChanged("DesktopFlowRunActionLogsStatus");
+			}
+		}
+		
+		/// <summary>
+		/// What verbosity level the Power Automate Desktop Flow Run Action Logs allow.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("desktopflowrunactionlogverbosity")]
+		public virtual Organization_DesktopFlowRunActionLogVerbosity? DesktopFlowRunActionLogVerbosity
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return ((Organization_DesktopFlowRunActionLogVerbosity?)(EntityOptionSetEnum.GetEnum(this, "desktopflowrunactionlogverbosity")));
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("DesktopFlowRunActionLogVerbosity");
+				this.SetAttributeValue("desktopflowrunactionlogverbosity", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
+				this.OnPropertyChanged("DesktopFlowRunActionLogVerbosity");
+			}
+		}
+		
+		/// <summary>
+		/// Where the Power Automate Desktop Flow Run Action logs are stored.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("desktopflowrunactionlogversion")]
+		public virtual Organization_DesktopFlowRunActionLogVersion? DesktopFlowRunActionLogVersion
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return ((Organization_DesktopFlowRunActionLogVersion?)(EntityOptionSetEnum.GetEnum(this, "desktopflowrunactionlogversion")));
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("DesktopFlowRunActionLogVersion");
+				this.SetAttributeValue("desktopflowrunactionlogversion", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
+				this.OnPropertyChanged("DesktopFlowRunActionLogVersion");
+			}
+		}
+		
+		/// <summary>
 		/// Reason for disabling the organization.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("disabledreason")]
@@ -9778,6 +11353,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 			get
 			{
 				return this.GetAttributeValue<string>("disabledreason");
+			}
+		}
+		
+		/// <summary>
+		/// Disable sharing system labels for the organization.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("disablesystemlabelscachesharing")]
+		public System.Nullable<bool> DisableSystemLabelsCacheSharing
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("disablesystemlabelscachesharing");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("DisableSystemLabelsCacheSharing");
+				this.SetAttributeValue("disablesystemlabelscachesharing", value);
+				this.OnPropertyChanged("DisableSystemLabelsCacheSharing");
 			}
 		}
 		
@@ -9962,6 +11557,126 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
+		/// Enable this feature to allow cross-geo boundary sharing of aggregated analytics data if your preferred data location for Viva Insights is different than the location of your environment
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("enablecopilotstudiocrossgeosharedatawithvivainsights")]
+		public System.Nullable<bool> EnableCopilotStudioCrossGeoShareDataWithVivaInsights
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("enablecopilotstudiocrossgeosharedatawithvivainsights");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("EnableCopilotStudioCrossGeoShareDataWithVivaInsights");
+				this.SetAttributeValue("enablecopilotstudiocrossgeosharedatawithvivainsights", value);
+				this.OnPropertyChanged("EnableCopilotStudioCrossGeoShareDataWithVivaInsights");
+			}
+		}
+		
+		/// <summary>
+		/// (Deprecated) Enable this feature to allow Copilot Studio to share aggregated analytics data for custom agents with Viva Insights for an individual environment
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("enablecopilotstudiosharedatawithvi")]
+		public System.Nullable<bool> EnableCopilotStudioShareDataWithVI
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("enablecopilotstudiosharedatawithvi");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("EnableCopilotStudioShareDataWithVI");
+				this.SetAttributeValue("enablecopilotstudiosharedatawithvi", value);
+				this.OnPropertyChanged("EnableCopilotStudioShareDataWithVI");
+			}
+		}
+		
+		/// <summary>
+		/// Enable this feature to allow Copilot Studio to share aggregated analytics data for custom agents with Viva Insights for an individual environment
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("enablecopilotstudiosharedatawithvivainsights")]
+		public System.Nullable<bool> EnableCopilotStudioShareDataWithVivaInsights
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("enablecopilotstudiosharedatawithvivainsights");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("EnableCopilotStudioShareDataWithVivaInsights");
+				this.SetAttributeValue("enablecopilotstudiosharedatawithvivainsights", value);
+				this.OnPropertyChanged("EnableCopilotStudioShareDataWithVivaInsights");
+			}
+		}
+		
+		/// <summary>
+		/// Enables the Environment Settings App
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("enableenvironmentsettingsapp")]
+		public System.Nullable<bool> EnableEnvironmentSettingsApp
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("enableenvironmentsettingsapp");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("EnableEnvironmentSettingsApp");
+				this.SetAttributeValue("enableenvironmentsettingsapp", value);
+				this.OnPropertyChanged("EnableEnvironmentSettingsApp");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates whether the creation of flows is within a solution by default for this organization.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("enableflowsinsolutionbydefault")]
+		public System.Nullable<bool> EnableFlowsInSolutionByDefault
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("enableflowsinsolutionbydefault");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("EnableFlowsInSolutionByDefault");
+				this.SetAttributeValue("enableflowsinsolutionbydefault", value);
+				this.OnPropertyChanged("EnableFlowsInSolutionByDefault");
+			}
+		}
+		
+		/// <summary>
+		/// Organizations with this attribute set to true will be granted a grace period and excluded from the initial world wide enablement of 'creation of flows within a solution by default' functionality. Once the grace period expires, the functionality will be enabled in your organization.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("enableflowsinsolutionbydefaultgraceperiod")]
+		public System.Nullable<bool> EnableFlowsInSolutionByDefaultGracePeriod
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("enableflowsinsolutionbydefaultgraceperiod");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("EnableFlowsInSolutionByDefaultGracePeriod");
+				this.SetAttributeValue("enableflowsinsolutionbydefaultgraceperiod", value);
+				this.OnPropertyChanged("EnableFlowsInSolutionByDefaultGracePeriod");
+			}
+		}
+		
+		/// <summary>
 		/// Enable Integration with Immersive Skype
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("enableimmersiveskypeintegration")]
@@ -9978,6 +11693,86 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 				this.OnPropertyChanging("EnableImmersiveSkypeIntegration");
 				this.SetAttributeValue("enableimmersiveskypeintegration", value);
 				this.OnPropertyChanged("EnableImmersiveSkypeIntegration");
+			}
+		}
+		
+		/// <summary>
+		/// Information that specifies whether IP based cookie binding is enabled
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("enableipbasedcookiebinding")]
+		public System.Nullable<bool> EnableIpBasedCookieBinding
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("enableipbasedcookiebinding");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("EnableIpBasedCookieBinding");
+				this.SetAttributeValue("enableipbasedcookiebinding", value);
+				this.OnPropertyChanged("EnableIpBasedCookieBinding");
+			}
+		}
+		
+		/// <summary>
+		/// Information that specifies whether IP based firewall rule is enabled
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("enableipbasedfirewallrule")]
+		public System.Nullable<bool> EnableIpBasedFirewallRule
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("enableipbasedfirewallrule");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("EnableIpBasedFirewallRule");
+				this.SetAttributeValue("enableipbasedfirewallrule", value);
+				this.OnPropertyChanged("EnableIpBasedFirewallRule");
+			}
+		}
+		
+		/// <summary>
+		/// Information that specifies whether IP based firewall rule is enabled in Audit Only Mode
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("enableipbasedfirewallruleinauditmode")]
+		public System.Nullable<bool> EnableIpBasedFirewallRuleInAuditMode
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("enableipbasedfirewallruleinauditmode");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("EnableIpBasedFirewallRuleInAuditMode");
+				this.SetAttributeValue("enableipbasedfirewallruleinauditmode", value);
+				this.OnPropertyChanged("EnableIpBasedFirewallRuleInAuditMode");
+			}
+		}
+		
+		/// <summary>
+		/// Information that specifies whether IP based SAS URI generation rule is enabled
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("enableipbasedstorageaccesssignaturerule")]
+		public System.Nullable<bool> EnableIpBasedStorageAccessSignatureRule
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("enableipbasedstorageaccesssignaturerule");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("EnableIpBasedStorageAccessSignatureRule");
+				this.SetAttributeValue("enableipbasedstorageaccesssignaturerule", value);
+				this.OnPropertyChanged("EnableIpBasedStorageAccessSignatureRule");
 			}
 		}
 		
@@ -10122,6 +11917,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
+		/// Leave empty to use default setting. Set to on/off to enable/disable CDN for UCI.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("enableunifiedclientcdn")]
+		public System.Nullable<bool> EnableUnifiedClientCDN
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("enableunifiedclientcdn");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("EnableUnifiedClientCDN");
+				this.SetAttributeValue("enableunifiedclientcdn", value);
+				this.OnPropertyChanged("EnableUnifiedClientCDN");
+			}
+		}
+		
+		/// <summary>
 		/// Enable site map and commanding update
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("enableunifiedinterfaceshellrefresh")]
@@ -10158,6 +11973,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 				this.OnPropertyChanging("EnforceReadOnlyPlugins");
 				this.SetAttributeValue("enforcereadonlyplugins", value);
 				this.OnPropertyChanged("EnforceReadOnlyPlugins");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates whether validation enforcement has been enabled for this organization's apps.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("enforcevalidations")]
+		public System.Nullable<bool> EnforceValidations
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("enforcevalidations");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("EnforceValidations");
+				this.SetAttributeValue("enforcevalidations", value);
+				this.OnPropertyChanged("EnforceValidations");
 			}
 		}
 		
@@ -10551,6 +12386,46 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<bool>>("fiscalsettingsupdated");
+			}
+		}
+		
+		/// <summary>
+		/// Default time to live in minutes for new records in the Flow Logs entity.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("flowlogsttlinminutes")]
+		public System.Nullable<int> FlowLogsTtlInMinutes
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("flowlogsttlinminutes");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("FlowLogsTtlInMinutes");
+				this.SetAttributeValue("flowlogsttlinminutes", value);
+				this.OnPropertyChanged("FlowLogsTtlInMinutes");
+			}
+		}
+		
+		/// <summary>
+		/// Time to live (in seconds) for flow run
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("flowruntimetoliveinseconds")]
+		public System.Nullable<int> FlowRunTimeToLiveInSeconds
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("flowruntimetoliveinseconds");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("FlowRunTimeToLiveInSeconds");
+				this.SetAttributeValue("flowruntimetoliveinseconds", value);
+				this.OnPropertyChanged("FlowRunTimeToLiveInSeconds");
 			}
 		}
 		
@@ -11075,6 +12950,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
+		/// IP Based SAS mode.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("ipbasedstorageaccesssignaturemode")]
+		public virtual Organization_IpBasedStorageAccessSignatureMode? IpBasedStorageAccessSignatureMode
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return ((Organization_IpBasedStorageAccessSignatureMode?)(EntityOptionSetEnum.GetEnum(this, "ipbasedstorageaccesssignaturemode")));
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("IpBasedStorageAccessSignatureMode");
+				this.SetAttributeValue("ipbasedstorageaccesssignaturemode", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
+				this.OnPropertyChanged("IpBasedStorageAccessSignatureMode");
+			}
+		}
+		
+		/// <summary>
 		/// Indicates whether the feature Action Card should be enabled for the organization.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isactioncardenabled")]
@@ -11268,6 +13163,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isautoinstallappford365inteamsenabled")]
+		public System.Nullable<bool> IsAutoInstallAppForD365InTeamsEnabled
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("isautoinstallappford365inteamsenabled");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("IsAutoInstallAppForD365InTeamsEnabled");
+				this.SetAttributeValue("isautoinstallappford365inteamsenabled", value);
+				this.OnPropertyChanged("IsAutoInstallAppForD365InTeamsEnabled");
+			}
+		}
+		
+		/// <summary>
 		/// Information on whether auto save is enabled.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isautosaveenabled")]
@@ -11284,6 +13199,46 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 				this.OnPropertyChanging("IsAutoSaveEnabled");
 				this.SetAttributeValue("isautosaveenabled", value);
 				this.OnPropertyChanged("IsAutoSaveEnabled");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isbasecardstaticfielddataenabled")]
+		public System.Nullable<bool> IsBaseCardStaticFieldDataEnabled
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("isbasecardstaticfielddataenabled");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("IsBaseCardStaticFieldDataEnabled");
+				this.SetAttributeValue("isbasecardstaticfielddataenabled", value);
+				this.OnPropertyChanged("IsBaseCardStaticFieldDataEnabled");
+			}
+		}
+		
+		/// <summary>
+		/// Determines whether users can make use of basic Geospatial featuers in Canvas apps.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isbasicgeospatialintegrationenabled")]
+		public System.Nullable<bool> IsBasicGeospatialIntegrationEnabled
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("isbasicgeospatialintegrationenabled");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("IsBasicGeospatialIntegrationEnabled");
+				this.SetAttributeValue("isbasicgeospatialintegrationenabled", value);
+				this.OnPropertyChanged("IsBasicGeospatialIntegrationEnabled");
 			}
 		}
 		
@@ -11448,6 +13403,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
+		/// Determines whether users can provide feedback Copilot experiences.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("iscopilotfeedbackenabled")]
+		public System.Nullable<bool> IsCopilotFeedbackEnabled
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("iscopilotfeedbackenabled");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("IsCopilotFeedbackEnabled");
+				this.SetAttributeValue("iscopilotfeedbackenabled", value);
+				this.OnPropertyChanged("IsCopilotFeedbackEnabled");
+			}
+		}
+		
+		/// <summary>
 		/// Indicates whether Custom Controls in canvas PowerApps feature has been enabled for the organization.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("iscustomcontrolsincanvasappsenabled")]
@@ -11524,6 +13499,106 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 				this.OnPropertyChanging("IsDelveActionHubIntegrationEnabled");
 				this.SetAttributeValue("isdelveactionhubintegrationenabled", value);
 				this.OnPropertyChanged("IsDelveActionHubIntegrationEnabled");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates whether connection embedding in Desktop Flows is enabled in this organization.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isdesktopflowconnectionembeddingenabled")]
+		public System.Nullable<bool> IsDesktopFlowConnectionEmbeddingEnabled
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("isdesktopflowconnectionembeddingenabled");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("IsDesktopFlowConnectionEmbeddingEnabled");
+				this.SetAttributeValue("isdesktopflowconnectionembeddingenabled", value);
+				this.OnPropertyChanged("IsDesktopFlowConnectionEmbeddingEnabled");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates whether the Desktop Flows UI Automation Runtime Repair for Attended feature for this organization.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isdesktopflowruntimerepairattendedenabled")]
+		public System.Nullable<bool> IsDesktopFlowRuntimeRepairAttendedEnabled
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("isdesktopflowruntimerepairattendedenabled");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("IsDesktopFlowRuntimeRepairAttendedEnabled");
+				this.SetAttributeValue("isdesktopflowruntimerepairattendedenabled", value);
+				this.OnPropertyChanged("IsDesktopFlowRuntimeRepairAttendedEnabled");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates whether the Desktop Flows UI Automation Runtime Repair for Unattended feature for this organization.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isdesktopflowruntimerepairunattendedenabled")]
+		public System.Nullable<bool> IsDesktopFlowRuntimeRepairUnattendedEnabled
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("isdesktopflowruntimerepairunattendedenabled");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("IsDesktopFlowRuntimeRepairUnattendedEnabled");
+				this.SetAttributeValue("isdesktopflowruntimerepairunattendedenabled", value);
+				this.OnPropertyChanged("IsDesktopFlowRuntimeRepairUnattendedEnabled");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates whether v2 schema for Desktop Flows is enabled in this organization.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isdesktopflowschemav2enabled")]
+		public System.Nullable<bool> IsDesktopFlowSchemaV2Enabled
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("isdesktopflowschemav2enabled");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("IsDesktopFlowSchemaV2Enabled");
+				this.SetAttributeValue("isdesktopflowschemav2enabled", value);
+				this.OnPropertyChanged("IsDesktopFlowSchemaV2Enabled");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates whether Windows Vanilla Image will be available for Desktop Flow users in this organization.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isdesktopflowvanillaimagesharingenabled")]
+		public System.Nullable<bool> IsDesktopFlowVanillaImageSharingEnabled
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("isdesktopflowvanillaimagesharingenabled");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("IsDesktopFlowVanillaImageSharingEnabled");
+				this.SetAttributeValue("isdesktopflowvanillaimagesharingenabled", value);
+				this.OnPropertyChanged("IsDesktopFlowVanillaImageSharingEnabled");
 			}
 		}
 		
@@ -11617,6 +13692,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 				this.OnPropertyChanging("IsDuplicateDetectionEnabledForOnlineCreateUpdate");
 				this.SetAttributeValue("isduplicatedetectionenabledforonlinecreateupdate", value);
 				this.OnPropertyChanged("IsDuplicateDetectionEnabledForOnlineCreateUpdate");
+			}
+		}
+		
+		/// <summary>
+		/// Information on whether Smart Email Address Validation is enabled.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isemailaddressvalidationenabled")]
+		public System.Nullable<bool> IsEmailAddressValidationEnabled
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("isemailaddressvalidationenabled");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("IsEmailAddressValidationEnabled");
+				this.SetAttributeValue("isemailaddressvalidationenabled", value);
+				this.OnPropertyChanged("IsEmailAddressValidationEnabled");
 			}
 		}
 		
@@ -11841,6 +13936,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
+		/// Indicates whether data collection for ideas in canvas PowerApps has been enabled.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isideasdatacollectionenabled")]
+		public System.Nullable<bool> IsIdeasDataCollectionEnabled
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("isideasdatacollectionenabled");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("IsIdeasDataCollectionEnabled");
+				this.SetAttributeValue("isideasdatacollectionenabled", value);
+				this.OnPropertyChanged("IsIdeasDataCollectionEnabled");
+			}
+		}
+		
+		/// <summary>
 		/// Give Consent to use LUIS in Dynamics 365 Bot
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isluisenabledford365bot")]
@@ -11981,6 +14096,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
+		/// Indicates whether the maker can create Power Automate money based saving rules.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("ismoneysavingsallowed")]
+		public System.Nullable<bool> IsMoneySavingsAllowed
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("ismoneysavingsallowed");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("IsMoneySavingsAllowed");
+				this.SetAttributeValue("ismoneysavingsallowed", value);
+				this.OnPropertyChanged("IsMoneySavingsAllowed");
+			}
+		}
+		
+		/// <summary>
 		/// Indicates whether Microsoft Teams Collaboration feature has been enabled for the organization.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("ismsteamscollaborationenabled")]
@@ -12101,6 +14236,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isnotificationford365inteamsenabled")]
+		public System.Nullable<bool> IsNotificationForD365InTeamsEnabled
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("isnotificationford365inteamsenabled");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("IsNotificationForD365InTeamsEnabled");
+				this.SetAttributeValue("isnotificationford365inteamsenabled", value);
+				this.OnPropertyChanged("IsNotificationForD365InTeamsEnabled");
+			}
+		}
+		
+		/// <summary>
 		/// Indicates whether the feature OfficeGraph should be enabled for the organization.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isofficegraphenabled")]
@@ -12177,6 +14332,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 				this.OnPropertyChanging("IsPDFGenerationEnabled");
 				this.SetAttributeValue("ispdfgenerationenabled", value);
 				this.OnPropertyChanged("IsPDFGenerationEnabled");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates whether the Per Process overage feature is enabled in this organization.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isperprocesscapacityoverageenabled")]
+		public System.Nullable<bool> IsPerProcessCapacityOverageEnabled
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("isperprocesscapacityoverageenabled");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("IsPerProcessCapacityOverageEnabled");
+				this.SetAttributeValue("isperprocesscapacityoverageenabled", value);
+				this.OnPropertyChanged("IsPerProcessCapacityOverageEnabled");
 			}
 		}
 		
@@ -12301,6 +14476,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
+		/// Indicates whether the Process capacity auto-claim feature is enabled in this organization.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isprocesscapacityautoclaimenabled")]
+		public System.Nullable<bool> IsProcessCapacityAutoClaimEnabled
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("isprocesscapacityautoclaimenabled");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("IsProcessCapacityAutoClaimEnabled");
+				this.SetAttributeValue("isprocesscapacityautoclaimenabled", value);
+				this.OnPropertyChanged("IsProcessCapacityAutoClaimEnabled");
+			}
+		}
+		
+		/// <summary>
 		/// Select whether to use the standard Out-of-box Opportunity Close experience or opt to for a customized experience.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isquickcreateenabledforopportunityclose")]
@@ -12397,6 +14592,106 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 				this.OnPropertyChanging("IsRichTextNotesEnabled");
 				this.SetAttributeValue("isrichtextnotesenabled", value);
 				this.OnPropertyChanged("IsRichTextNotesEnabled");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates whether AAD Join for RPA Autoscale is enabled in this organization..
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isrpaautoscaleaadjoinenabled")]
+		public System.Nullable<bool> IsRpaAutoscaleAadJoinEnabled
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("isrpaautoscaleaadjoinenabled");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("IsRpaAutoscaleAadJoinEnabled");
+				this.SetAttributeValue("isrpaautoscaleaadjoinenabled", value);
+				this.OnPropertyChanged("IsRpaAutoscaleAadJoinEnabled");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates whether Autoscale feature for RPA is enabled in this organization.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isrpaautoscaleenabled")]
+		public System.Nullable<bool> IsRpaAutoscaleEnabled
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("isrpaautoscaleenabled");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("IsRpaAutoscaleEnabled");
+				this.SetAttributeValue("isrpaautoscaleenabled", value);
+				this.OnPropertyChanged("IsRpaAutoscaleEnabled");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates whether RPA Box feature is enabled in this organization in locations outside the tenant's geographical location.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isrpaboxcrossgeoenabled")]
+		public System.Nullable<bool> IsRpaBoxCrossGeoEnabled
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("isrpaboxcrossgeoenabled");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("IsRpaBoxCrossGeoEnabled");
+				this.SetAttributeValue("isrpaboxcrossgeoenabled", value);
+				this.OnPropertyChanged("IsRpaBoxCrossGeoEnabled");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates whether RPA Box feature is enabled in this organization.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isrpaboxenabled")]
+		public System.Nullable<bool> IsRpaBoxEnabled
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("isrpaboxenabled");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("IsRpaBoxEnabled");
+				this.SetAttributeValue("isrpaboxenabled", value);
+				this.OnPropertyChanged("IsRpaBoxEnabled");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates whether Unattended runs feature for RPA is enabled in this organization.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isrpaunattendedenabled")]
+		public System.Nullable<bool> IsRpaUnattendedEnabled
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("isrpaunattendedenabled");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("IsRpaUnattendedEnabled");
+				this.SetAttributeValue("isrpaunattendedenabled", value);
+				this.OnPropertyChanged("IsRpaUnattendedEnabled");
 			}
 		}
 		
@@ -12718,6 +15013,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 				this.OnPropertyChanging("LanguageCode");
 				this.SetAttributeValue("languagecode", value);
 				this.OnPropertyChanged("LanguageCode");
+			}
+		}
+		
+		/// <summary>
+		/// Show legacy app for admins
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("legacyapptoggle")]
+		public virtual Organization_LegacyAppToggle? LegacyAppToggle
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return ((Organization_LegacyAppToggle?)(EntityOptionSetEnum.GetEnum(this, "legacyapptoggle")));
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("LegacyAppToggle");
+				this.SetAttributeValue("legacyapptoggle", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
+				this.OnPropertyChanged("LegacyAppToggle");
 			}
 		}
 		
@@ -13142,6 +15457,46 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
+		/// Maximum Rollup Fields Per Entity
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("maxrollupfieldsperentity")]
+		public System.Nullable<int> MaxRollupFieldsPerEntity
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("maxrollupfieldsperentity");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("MaxRollupFieldsPerEntity");
+				this.SetAttributeValue("maxrollupfieldsperentity", value);
+				this.OnPropertyChanged("MaxRollupFieldsPerEntity");
+			}
+		}
+		
+		/// <summary>
+		/// Maximum Rollup Fields Per Organization
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("maxrollupfieldsperorg")]
+		public System.Nullable<int> MaxRollupFieldsPerOrg
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("maxrollupfieldsperorg");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("MaxRollupFieldsPerOrg");
+				this.SetAttributeValue("maxrollupfieldsperorg", value);
+				this.OnPropertyChanged("MaxRollupFieldsPerOrg");
+			}
+		}
+		
+		/// <summary>
 		/// 
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("maxslaitemspersla")]
@@ -13367,6 +15722,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
+		/// Indicates whether coauthoring is enabled in modern app designer
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modernappdesignercoauthoringenabled")]
+		public System.Nullable<bool> ModernAppDesignerCoauthoringEnabled
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("modernappdesignercoauthoringenabled");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("ModernAppDesignerCoauthoringEnabled");
+				this.SetAttributeValue("modernappdesignercoauthoringenabled", value);
+				this.OnPropertyChanged("ModernAppDesignerCoauthoringEnabled");
+			}
+		}
+		
+		/// <summary>
 		/// Unique identifier of the user who last modified the organization.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedby")]
@@ -13413,6 +15788,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
+		/// Show the sort by button on views
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("multicolumnsortenabled")]
+		public System.Nullable<int> MultiColumnSortEnabled
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("multicolumnsortenabled");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("MultiColumnSortEnabled");
+				this.SetAttributeValue("multicolumnsortenabled", value);
+				this.OnPropertyChanged("MultiColumnSortEnabled");
+			}
+		}
+		
+		/// <summary>
 		/// Name of the organization. The name is set when Microsoft CRM is installed and should not be changed.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("name")]
@@ -13429,6 +15824,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 				this.OnPropertyChanging("Name");
 				this.SetAttributeValue("name", value);
 				this.OnPropertyChanged("Name");
+			}
+		}
+		
+		/// <summary>
+		/// Enables Natural Language Assist Filter.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("naturallanguageassistfilter")]
+		public System.Nullable<bool> NaturalLanguageAssistFilter
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("naturallanguageassistfilter");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("NaturalLanguageAssistFilter");
+				this.SetAttributeValue("naturallanguageassistfilter", value);
+				this.OnPropertyChanged("NaturalLanguageAssistFilter");
 			}
 		}
 		
@@ -13653,6 +16068,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
+		/// Indicates if this organization will opt-out from automatically enabling schema v2 on the organization.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("optoutschemav2enabledbydefault")]
+		public System.Nullable<bool> OptOutSchemaV2EnabledByDefault
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("optoutschemav2enabledbydefault");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("OptOutSchemaV2EnabledByDefault");
+				this.SetAttributeValue("optoutschemav2enabledbydefault", value);
+				this.OnPropertyChanged("OptOutSchemaV2EnabledByDefault");
+			}
+		}
+		
+		/// <summary>
 		/// Prefix to use for all orders throughout Microsoft Dynamics 365.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("orderprefix")]
@@ -13840,6 +16275,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
+		/// This setting contains the date time before an ACT sync can execute.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("performactsyncafter")]
+		public System.Nullable<System.DateTime> PerformACTSyncAfter
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("performactsyncafter");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("PerformACTSyncAfter");
+				this.SetAttributeValue("performactsyncafter", value);
+				this.OnPropertyChanged("PerformACTSyncAfter");
+			}
+		}
+		
+		/// <summary>
 		/// For internal use only.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("picture")]
@@ -13936,6 +16391,86 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 				this.OnPropertyChanging("PostMessageWhitelistDomains");
 				this.SetAttributeValue("postmessagewhitelistdomains", value);
 				this.OnPropertyChanged("PostMessageWhitelistDomains");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates whether bot for makers is enabled.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("powerappsmakerbotenabled")]
+		public System.Nullable<bool> PowerAppsMakerBotEnabled
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("powerappsmakerbotenabled");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("PowerAppsMakerBotEnabled");
+				this.SetAttributeValue("powerappsmakerbotenabled", value);
+				this.OnPropertyChanged("PowerAppsMakerBotEnabled");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates whether cross region operations are allowed for the organization
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("powerbiallowcrossregionoperations")]
+		public System.Nullable<bool> PowerBIAllowCrossRegionOperations
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("powerbiallowcrossregionoperations");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("PowerBIAllowCrossRegionOperations");
+				this.SetAttributeValue("powerbiallowcrossregionoperations", value);
+				this.OnPropertyChanged("PowerBIAllowCrossRegionOperations");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates whether automatic permissions assignment to Power BI has been enabled for the organization
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("powerbiautomaticpermissionsassignment")]
+		public System.Nullable<bool> PowerBIAutomaticPermissionsAssignment
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("powerbiautomaticpermissionsassignment");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("PowerBIAutomaticPermissionsAssignment");
+				this.SetAttributeValue("powerbiautomaticpermissionsassignment", value);
+				this.OnPropertyChanged("PowerBIAutomaticPermissionsAssignment");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates whether creation of Power BI components has been enabled for the organization
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("powerbicomponentscreate")]
+		public System.Nullable<bool> PowerBIComponentsCreate
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("powerbicomponentscreate");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("PowerBIComponentsCreate");
+				this.SetAttributeValue("powerbicomponentscreate", value);
+				this.OnPropertyChanged("PowerBIComponentsCreate");
 			}
 		}
 		
@@ -14281,6 +16816,46 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
+		/// Current orgnization release cadence value
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("releasecadence")]
+		public System.Nullable<int> ReleaseCadence
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("releasecadence");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("ReleaseCadence");
+				this.SetAttributeValue("releasecadence", value);
+				this.OnPropertyChanged("ReleaseCadence");
+			}
+		}
+		
+		/// <summary>
+		/// Model app refresh channel
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("releasechannel")]
+		public virtual Organization_ReleaseChannel? ReleaseChannel
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return ((Organization_ReleaseChannel?)(EntityOptionSetEnum.GetEnum(this, "releasechannel")));
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("ReleaseChannel");
+				this.SetAttributeValue("releasechannel", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
+				this.OnPropertyChanged("ReleaseChannel");
+			}
+		}
+		
+		/// <summary>
 		/// Release Wave Applied to Environment.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("releasewavename")]
@@ -14481,6 +17056,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
+		/// Information that specifies whether guest user restriction is enabled
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("restrictGuestUserAccess")]
+		public System.Nullable<bool> RestrictGuestUserAccess
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("restrictGuestUserAccess");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("RestrictGuestUserAccess");
+				this.SetAttributeValue("restrictGuestUserAccess", value);
+				this.OnPropertyChanged("RestrictGuestUserAccess");
+			}
+		}
+		
+		/// <summary>
 		/// Flag to restrict Update on incident.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("restrictstatusupdate")]
@@ -14497,6 +17092,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 				this.OnPropertyChanging("RestrictStatusUpdate");
 				this.SetAttributeValue("restrictstatusupdate", value);
 				this.OnPropertyChanged("RestrictStatusUpdate");
+			}
+		}
+		
+		/// <summary>
+		/// Information that specifies Reverse Proxy IP addresses from which requests have to be allowed.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("reverseproxyipaddresses")]
+		public string ReverseProxyIpAddresses
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<string>("reverseproxyipaddresses");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("ReverseProxyIpAddresses");
+				this.SetAttributeValue("reverseproxyipaddresses", value);
+				this.OnPropertyChanged("ReverseProxyIpAddresses");
 			}
 		}
 		
@@ -14521,6 +17136,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
+		/// Samesite mode for Session Cookie 0 is Default, 1 is None, 2 is Lax , 3 is Strict
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("samesitemodeforsessioncookie")]
+		public virtual organization_SamesitemodeforSessionCookie? SameSiteModeForSessionCookie
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return ((organization_SamesitemodeforSessionCookie?)(EntityOptionSetEnum.GetEnum(this, "samesitemodeforsessioncookie")));
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("SameSiteModeForSessionCookie");
+				this.SetAttributeValue("samesitemodeforsessioncookie", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
+				this.OnPropertyChanged("SameSiteModeForSessionCookie");
+			}
+		}
+		
+		/// <summary>
 		/// Unique identifier of the sample data import job.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sampledataimportid")]
@@ -14537,6 +17172,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 				this.OnPropertyChanging("SampleDataImportId");
 				this.SetAttributeValue("sampledataimportid", value);
 				this.OnPropertyChanged("SampleDataImportId");
+			}
+		}
+		
+		/// <summary>
+		/// Default time to live in minutes for new Power Automate savings events records in flow aggregation.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("savingeventsttlinminutes")]
+		public System.Nullable<int> SavingEventsTTLInMinutes
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("savingeventsttlinminutes");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("SavingEventsTTLInMinutes");
+				this.SetAttributeValue("savingeventsttlinminutes", value);
+				this.OnPropertyChanged("SavingEventsTTLInMinutes");
 			}
 		}
 		
@@ -15102,6 +17757,46 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
+		/// Leave empty to use default setting. Set to on/off to enable/disable Admin emails when Solution Checker validation fails.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("suppressvalidationemails")]
+		public System.Nullable<bool> SuppressValidationEmails
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("suppressvalidationemails");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("SuppressValidationEmails");
+				this.SetAttributeValue("suppressvalidationemails", value);
+				this.OnPropertyChanged("SuppressValidationEmails");
+			}
+		}
+		
+		/// <summary>
+		/// Controls the appearance of option to search over a single DV search indexed table in model-driven apps’ global search in the header.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("tablescopeddvsearchinapps")]
+		public System.Nullable<bool> TableScopedDVSearchInApps
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("tablescopeddvsearchinapps");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("TableScopedDVSearchInApps");
+				this.SetAttributeValue("tablescopeddvsearchinapps", value);
+				this.OnPropertyChanged("TableScopedDVSearchInApps");
+			}
+		}
+		
+		/// <summary>
 		/// Maximum number of aggressive polling cycles executed for email auto-tagging when a new email is received.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("tagmaxaggressivecycles")]
@@ -15158,6 +17853,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 				this.OnPropertyChanging("TaskBasedFlowEnabled");
 				this.SetAttributeValue("taskbasedflowenabled", value);
 				this.OnPropertyChanged("TaskBasedFlowEnabled");
+			}
+		}
+		
+		/// <summary>
+		/// Information on whether Teams Chat Data Sync is enabled.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("teamschatdatasync")]
+		public System.Nullable<bool> TeamsChatDataSync
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("teamschatdatasync");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("TeamsChatDataSync");
+				this.SetAttributeValue("teamschatdatasync", value);
+				this.OnPropertyChanged("TeamsChatDataSync");
 			}
 		}
 		
@@ -15631,6 +18346,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 			get
 			{
 				return this.GetAttributeValue<string>("v3calloutconfighash");
+			}
+		}
+		
+		/// <summary>
+		/// Validation mode for apps in this environment
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("validationmode")]
+		public virtual Organization_ValidationMode? ValidationMode
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return ((Organization_ValidationMode?)(EntityOptionSetEnum.GetEnum(this, "validationmode")));
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("ValidationMode");
+				this.SetAttributeValue("validationmode", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
+				this.OnPropertyChanged("ValidationMode");
 			}
 		}
 		
@@ -18828,6 +21563,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 			get
 			{
 				return this.GetAttributeValue<Microsoft.Xrm.Sdk.Money>("pc_amount_base");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("pc_applytofirstmonth")]
+		public System.Nullable<bool> pc_ApplyToFirstMonth
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("pc_applytofirstmonth");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("pc_ApplyToFirstMonth");
+				this.SetAttributeValue("pc_applytofirstmonth", value);
+				this.OnPropertyChanged("pc_ApplyToFirstMonth");
 			}
 		}
 		
@@ -22882,6 +25637,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
+		/// Bypasses the selected user from IP firewall restriction
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isallowedbyipfirewall")]
+		public System.Nullable<bool> IsAllowedByIpFirewall
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("isallowedbyipfirewall");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("IsAllowedByIpFirewall");
+				this.SetAttributeValue("isallowedbyipfirewall", value);
+				this.OnPropertyChanged("IsAllowedByIpFirewall");
+			}
+		}
+		
+		/// <summary>
 		/// Information about whether the user is enabled.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isdisabled")]
@@ -23623,6 +26398,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 				this.OnPropertyChanging("SharePointEmailAddress");
 				this.SetAttributeValue("sharepointemailaddress", value);
 				this.OnPropertyChanged("SharePointEmailAddress");
+			}
+		}
+		
+		/// <summary>
+		/// The type of user
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("systemmanagedusertype")]
+		public virtual SystemUser_SystemManagedUserType? SystemManagedUserType
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return ((SystemUser_SystemManagedUserType?)(EntityOptionSetEnum.GetEnum(this, "systemmanagedusertype")));
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("SystemManagedUserType");
+				this.SetAttributeValue("systemmanagedusertype", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
+				this.OnPropertyChanged("SystemManagedUserType");
 			}
 		}
 		
@@ -25693,6 +28488,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
+		/// Currency type that can be used for new currency.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("currencytype")]
+		public virtual TransactionCurrency_CurrencyType? CurrencyType
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return ((TransactionCurrency_CurrencyType?)(EntityOptionSetEnum.GetEnum(this, "currencytype")));
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("CurrencyType");
+				this.SetAttributeValue("currencytype", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
+				this.OnPropertyChanged("CurrencyType");
+			}
+		}
+		
+		/// <summary>
 		/// The default image for the entity.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("entityimage")]
@@ -26599,6 +29414,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
+		/// Determines the status of auto install of Dynamics 365 to Teams attempt has been completed
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("d365autoinstallattemptstatus")]
+		public virtual UserSettings_D365AutoInstallAttemptStatus? D365AutoInstallAttemptStatus
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return ((UserSettings_D365AutoInstallAttemptStatus?)(EntityOptionSetEnum.GetEnum(this, "d365autoinstallattemptstatus")));
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("D365AutoInstallAttemptStatus");
+				this.SetAttributeValue("d365autoinstallattemptstatus", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
+				this.OnPropertyChanged("D365AutoInstallAttemptStatus");
+			}
+		}
+		
+		/// <summary>
 		/// Information that specifies the level of data validation in excel worksheets exported in a format suitable for import.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("datavalidationmodeforexporttoexcel")]
@@ -27473,6 +30308,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 		}
 		
 		/// <summary>
+		/// Preferred Solution when create a component without under a solution in this organization
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("preferredsolution")]
+		public Microsoft.Xrm.Sdk.EntityReference PreferredSolution
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("preferredsolution");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("PreferredSolution");
+				this.SetAttributeValue("preferredsolution", value);
+				this.OnPropertyChanged("PreferredSolution");
+			}
+		}
+		
+		/// <summary>
 		/// Number of decimal places that can be used for prices.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("pricingdecimalprecision")]
@@ -27490,6 +30345,26 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 				this.OnPropertyChanging("PricingDecimalPrecision");
 				this.SetAttributeValue("pricingdecimalprecision", value);
 				this.OnPropertyChanged("PricingDecimalPrecision");
+			}
+		}
+		
+		/// <summary>
+		/// Model app channel override
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("releasechannel")]
+		public virtual UserSettings_ReleaseChannel? ReleaseChannel
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return ((UserSettings_ReleaseChannel?)(EntityOptionSetEnum.GetEnum(this, "releasechannel")));
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("ReleaseChannel");
+				this.SetAttributeValue("releasechannel", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
+				this.OnPropertyChanged("ReleaseChannel");
 			}
 		}
 		
@@ -27653,6 +30528,46 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 				this.OnPropertyChanging("SplitViewState");
 				this.SetAttributeValue("splitviewstate", value);
 				this.OnPropertyChanged("SplitViewState");
+			}
+		}
+		
+		/// <summary>
+		/// The number of times a user has interacted with the Tabled Scoped Dataverse Search feature teaching bubble.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("tablescopeddvsearchfeatureteachingbubbleviews")]
+		public System.Nullable<int> TableScopedDVSearchFeatureTeachingBubbleViews
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("tablescopeddvsearchfeatureteachingbubbleviews");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("TableScopedDVSearchFeatureTeachingBubbleViews");
+				this.SetAttributeValue("tablescopeddvsearchfeatureteachingbubbleviews", value);
+				this.OnPropertyChanged("TableScopedDVSearchFeatureTeachingBubbleViews");
+			}
+		}
+		
+		/// <summary>
+		/// The number of times a user has interacted with the Tabled Scoped Dataverse Search Quick Find teaching bubble.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("tablescopeddvsearchquickfindteachingbubbleviews")]
+		public System.Nullable<int> TableScopedDVSearchQuickFindTeachingBubbleViews
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("tablescopeddvsearchquickfindteachingbubbleviews");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("TableScopedDVSearchQuickFindTeachingBubbleViews");
+				this.SetAttributeValue("tablescopeddvsearchquickfindteachingbubbleviews", value);
+				this.OnPropertyChanged("TableScopedDVSearchQuickFindTeachingBubbleViews");
 			}
 		}
 		
@@ -28113,6 +31028,46 @@ namespace PC.PowerApps.Common.Entities.Dataverse
 				this.OnPropertyChanging("TransactionCurrencyId");
 				this.SetAttributeValue("transactioncurrencyid", value);
 				this.OnPropertyChanged("TransactionCurrencyId");
+			}
+		}
+		
+		/// <summary>
+		/// The list of app modules with try toggle sets
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("trytogglesets")]
+		public string TryToggleSets
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<string>("trytogglesets");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("TryToggleSets");
+				this.SetAttributeValue("trytogglesets", value);
+				this.OnPropertyChanged("TryToggleSets");
+			}
+		}
+		
+		/// <summary>
+		/// Enable or disable try toggle status.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("trytogglestatus")]
+		public System.Nullable<bool> TryToggleStatus
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("trytogglestatus");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.OnPropertyChanging("TryToggleStatus");
+				this.SetAttributeValue("trytogglestatus", value);
+				this.OnPropertyChanged("TryToggleStatus");
 			}
 		}
 		

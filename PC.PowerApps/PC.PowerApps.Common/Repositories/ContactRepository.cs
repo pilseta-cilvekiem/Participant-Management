@@ -213,22 +213,30 @@ namespace PC.PowerApps.Common.Repositories
 
             List<Period> participationsToDate = Period.Intersect(participations, calculationPeriod);
             List<Period> mergedParticipations = Period.Merge(participationsToDate);
+            List<Period> mergedParticipationFirstMonths = mergedParticipations
+                .Select(p => p.GetFirstCalendarMonth())
+                .ToList();
             List<Period> mergedParticipationFeeExemptions = Period.Merge(participationFeeExemptions);
             List<Period> participationsWithoutFeeExemptions = Period.Subtract(mergedParticipations, mergedParticipationFeeExemptions);
             List<Period> participationsWithoutFeeExemptionsWholeMonths = participationsWithoutFeeExemptions
                 .Select(p => p.ToCalendarMonths())
                 .ToList();
             List<Period> mergedParticipationsWithoutFeeExemptionsWholeMonths = Period.Merge(participationsWithoutFeeExemptionsWholeMonths);
+            List<Period> mergedParticipationsWithoutFeeExemptionsAndFirstMonthsWholeMonths =
+                Period.Subtract(mergedParticipationsWithoutFeeExemptionsWholeMonths, mergedParticipationFirstMonths);
 
             contact.pc_RequiredParticipationFee = new();
             foreach (pc_ParticipationFeeRule participationFeeRule in context.ParticipationFeeRules)
             {
                 Period participationFeePeriod = new(participationFeeRule.pc_From, participationFeeRule.pc_Till);
-                List<Period> contactParticipationFeePeriod = Period.Intersect(mergedParticipationsWithoutFeeExemptionsWholeMonths, participationFeePeriod);
-                List<int> contactParticipationFeePeriodLengths = contactParticipationFeePeriod
+                List<Period> participationsToUse = participationFeeRule.pc_ApplyToFirstMonth == true
+                    ? mergedParticipationsWithoutFeeExemptionsWholeMonths
+                    : mergedParticipationsWithoutFeeExemptionsAndFirstMonthsWholeMonths;
+                List<Period> participationFeePeriods = Period.Intersect(participationsToUse, participationFeePeriod);
+                List<int> participationFeePeriodLengths = participationFeePeriods
                     .Select(p => p.CalendarMonths)
                     .ToList();
-                int contactParticipationFeePeriodTotalLength = contactParticipationFeePeriodLengths.Sum();
+                int contactParticipationFeePeriodTotalLength = participationFeePeriodLengths.Sum();
                 contact.pc_RequiredParticipationFee.Value += contactParticipationFeePeriodTotalLength * Utils.GetAmountOrZero(participationFeeRule.pc_Amount);
             }
         }

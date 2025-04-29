@@ -28,7 +28,7 @@ namespace PC.PowerApps.Plugins.Bound.ParticipationFeeRules
                 context.EnsureAttributesNotModified(pfr => pfr.StatusCode);
             }
 
-            context.EnsureCreatedOrUpdatedAttributesNotEmpty(pfr => new { pfr.pc_Amount, pfr.pc_From });
+            context.EnsureCreatedOrUpdatedAttributesNotEmpty(pfr => new { pfr.pc_Amount, pfr.pc_ApplyToFirstMonth, pfr.pc_From });
 
             if (context.GetIsAnyAttributeModified(pfr => pfr.pc_From) && participationFeeRule.pc_From.Value.Day != 1)
             {
