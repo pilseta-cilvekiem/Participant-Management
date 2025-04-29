@@ -98,6 +98,9 @@
     <PluginType AssemblyQualifiedName="PC.PowerApps.Plugins.Bound.Settings.PreValidateCreateUpdate, PC.PowerApps.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e289f6c1abbb0b92" PluginTypeId="185e3e2d-1f84-44eb-83d1-f84b36893975" Name="PC.PowerApps.Plugins.Bound.Settings.PreValidateCreateUpdate">
       <FriendlyName>db7fea2a-d5b1-45dc-bc0c-514d1b20cd5b</FriendlyName>
     </PluginType>
+    <PluginType AssemblyQualifiedName="PC.PowerApps.Plugins.Bound.Transactions.ClearNonPaymentAmount, PC.PowerApps.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e289f6c1abbb0b92" PluginTypeId="76d94afe-5001-4108-af74-62b0c01b4a68" Name="PC.PowerApps.Plugins.Bound.Transactions.ClearNonPaymentAmount">
+      <FriendlyName>ad4cb9ca-3a6b-42ec-9c97-614be1e16244</FriendlyName>
+    </PluginType>
     <PluginType AssemblyQualifiedName="PC.PowerApps.Plugins.Bound.Transactions.MarkAsNonPayment, PC.PowerApps.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e289f6c1abbb0b92" PluginTypeId="a7a2ff56-6ca6-4378-8280-5a672ecac93a" Name="PC.PowerApps.Plugins.Bound.Transactions.MarkAsNonPayment">
       <FriendlyName>9435fd80-0853-4f61-a8c5-7dd525ba84d3</FriendlyName>
     </PluginType>

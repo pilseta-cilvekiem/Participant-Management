@@ -5,6 +5,7 @@
     <RolePrivilege name="prvCreateAppModule" level="Global" />
     <RolePrivilege name="prvCreateSharePointData" level="Global" />
     <RolePrivilege name="prvExportCustomization" level="Global" />
+    <RolePrivilege name="prvReadappaction" level="Global" />
     <RolePrivilege name="prvReadAppModule" level="Global" />
     <RolePrivilege name="prvReadArticleTemplate" level="Global" />
     <RolePrivilege name="prvReadAttribute" level="Global" />

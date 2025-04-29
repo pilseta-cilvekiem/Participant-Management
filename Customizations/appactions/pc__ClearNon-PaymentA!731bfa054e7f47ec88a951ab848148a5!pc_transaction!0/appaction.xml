@@ -1,0 +1,29 @@
+<appaction uniquename="pc__ClearNon-PaymentA!731bfa054e7f47ec88a951ab848148a5!pc_transaction!0">
+  <buttonlabeltext default="Clear Non-Payment Amount">
+    <label description="Clear Non-Payment Amount" languagecode="1033" />
+    <label description="Clear Non-Payment Amount" languagecode="1062" />
+  </buttonlabeltext>
+  <context>1</context>
+  <contextentity>
+    <logicalname>pc_transaction</logicalname>
+  </contextentity>
+  <contextvalue>pc_transaction</contextvalue>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>0</isgrouptitlehidden>
+  <location>0</location>
+  <name>ClearNon-PaymentA!731bfa054e7f47ec88a951ab848148a5</name>
+  <onclickeventjavascriptfunctionname>transaction.clearNonPaymentAmountFromForm</onclickeventjavascriptfunctionname>
+  <onclickeventjavascriptparameters>[{"type":5}]</onclickeventjavascriptparameters>
+  <onclickeventjavascriptwebresourceid>
+    <webresourceid>fcba2081-abf2-eb11-94ef-002248834145</webresourceid>
+  </onclickeventjavascriptwebresourceid>
+  <onclickeventtype>2</onclickeventtype>
+  <origin>0</origin>
+  <sequence>100350025.5000000000</sequence>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>0</type>
+  <visibilitytype>0</visibilitytype>
+</appaction>

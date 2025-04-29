@@ -153,6 +153,9 @@
   <data name="CantManuallyCreateTransaction" xml:space="preserve">
     <value>Cannot manually create a Transaction.</value>
   </data>
+  <data name="ClearingNonPaymentAmount" xml:space="preserve">
+    <value>Clearing non-payment amount from the transaction...</value>
+  </data>
   <data name="MarkingTransactionAsNonPayment" xml:space="preserve">
     <value>Marking the transaction as non-payment...</value>
   </data>

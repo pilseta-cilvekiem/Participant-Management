@@ -1,0 +1,20 @@
+<customapi uniquename="pc_ClearNonPaymentAmount">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>1</bindingtype>
+  <boundentitylogicalname>pc_transaction</boundentitylogicalname>
+  <description default="Clear Non-Payment Amount">
+    <label description="Clear Non-Payment Amount" languagecode="1033" />
+  </description>
+  <displayname default="Clear Non-Payment Amount">
+    <label description="Clear Non-Payment Amount" languagecode="1033" />
+  </displayname>
+  <executeprivilegename>prvCreatepc_Payment</executeprivilegename>
+  <iscustomizable>1</iscustomizable>
+  <isfunction>0</isfunction>
+  <isprivate>0</isprivate>
+  <name>pc_ClearNonPaymentAmount</name>
+  <plugintypeid>
+    <plugintypeexportkey>76d94afe-5001-4108-af74-62b0c01b4a68</plugintypeexportkey>
+  </plugintypeid>
+  <workflowsdkstepenabled>0</workflowsdkstepenabled>
+</customapi>
