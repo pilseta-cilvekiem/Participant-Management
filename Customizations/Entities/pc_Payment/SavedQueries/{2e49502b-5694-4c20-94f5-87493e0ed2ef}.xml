@@ -33,7 +33,7 @@
     </fetchxml>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <LocalizedNames>
-      <LocalizedName description="Payment Associated View" languagecode="1033" />
+      <LocalizedName description="Maksājumu saistītais skats" languagecode="1033" />
       <LocalizedName description="Maksājumu saistītais skats" languagecode="1062" />
     </LocalizedNames>
   </savedquery>

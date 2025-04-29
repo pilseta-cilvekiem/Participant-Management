@@ -16,7 +16,7 @@
   <isprivate>0</isprivate>
   <name>pc_MarkTransactionAsNonPayment</name>
   <plugintypeid>
-    <plugintypeid>a7a2ff56-6ca6-4378-8280-5a672ecac93a</plugintypeid>
+    <plugintypeexportkey>A7A2FF56-6CA6-4378-8280-5A672ECAC93A</plugintypeexportkey>
   </plugintypeid>
   <workflowsdkstepenabled>0</workflowsdkstepenabled>
 </customapi>

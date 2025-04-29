@@ -20,7 +20,7 @@
     </layoutxml>
     <querytype>0</querytype>
     <fetchxml>
-      <fetch version="1.0" output-format="xml-platform" mapping="logical">
+      <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
         <entity name="contact">
           <attribute name="fullname" />
           <attribute name="pc_participationlevel" />
@@ -32,8 +32,11 @@
           <filter type="and">
             <condition attribute="pc_wishestobeactive" operator="eq" value="1" />
             <condition attribute="pc_participationlevel" operator="not-null" />
-            <condition attribute="pc_paidparticipationfee" operator="ge" value="2" />
             <condition attribute="pc_isinvitedtoslack" operator="ne" value="1" />
+            <filter type="or">
+              <condition attribute="pc_paidparticipationfee" operator="ge" value="2" />
+              <condition attribute="pc_participantfrom" operator="on-or-after" value="2025-05-01" />
+            </filter>
           </filter>
         </entity>
       </fetch>

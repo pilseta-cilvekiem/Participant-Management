@@ -60,8 +60,7 @@
                     <row>
                       <cell colspan="2" showlabel="false" rowspan="12" id="{BE55AEDB-BA0B-4A7A-99A1-8C9089724AE2}" labelid="{96cc8ad7-0639-4115-81ba-456b7af0c8fc}" locklevel="0" ordinalvalue="10000">
                         <labels>
-                          <label description="Description" languagecode="1033" solutionaction="Added" />
-                          <label description="Apraksts" languagecode="1062" solutionaction="Added" />
+                          <label description="Description" languagecode="1033" solutionaction="Modified" />
                         </labels>
                       </cell>
                     </row>

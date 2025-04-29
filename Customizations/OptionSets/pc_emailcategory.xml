@@ -12,19 +12,19 @@
     <Description description="" languagecode="1033" />
   </Descriptions>
   <options>
-    <option value="947970000">
+    <option value="947970000" IsHidden="0">
       <labels>
         <label description="Debt Reminder" languagecode="1033" />
         <label description="Atgādinājums par parādu" languagecode="1062" />
       </labels>
     </option>
-    <option value="947970001">
+    <option value="947970001" IsHidden="0">
       <labels>
         <label description="Supporter Welcome Email" languagecode="1033" />
         <label description="Sagaidīšanas e-pasts" languagecode="1062" />
       </labels>
     </option>
-    <option value="947970002">
+    <option value="947970002" IsHidden="0">
       <labels>
         <label description="Member Welcome Email" languagecode="1033" />
       </labels>

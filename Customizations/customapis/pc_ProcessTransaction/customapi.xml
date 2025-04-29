@@ -16,7 +16,7 @@
   <isprivate>0</isprivate>
   <name>pc_ProcessTransaction</name>
   <plugintypeid>
-    <plugintypeid>36cc75ea-77fa-4013-957d-5b66a5042a54</plugintypeid>
+    <plugintypeexportkey>36CC75EA-77FA-4013-957D-5B66A5042A54</plugintypeexportkey>
   </plugintypeid>
   <workflowsdkstepenabled>0</workflowsdkstepenabled>
 </customapi>

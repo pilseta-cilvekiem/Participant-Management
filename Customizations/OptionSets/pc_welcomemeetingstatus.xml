@@ -12,13 +12,13 @@
     <Description description="" languagecode="1033" />
   </Descriptions>
   <options>
-    <option value="947970000">
+    <option value="947970000" IsHidden="0">
       <labels>
         <label description="Pending" languagecode="1033" />
         <label description="Gaida" languagecode="1062" />
       </labels>
     </option>
-    <option value="947970001">
+    <option value="947970001" IsHidden="0">
       <labels>
         <label description="Done" languagecode="1033" />
         <label description="Izpildīta" languagecode="1062" />

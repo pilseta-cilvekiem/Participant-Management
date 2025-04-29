@@ -12,25 +12,25 @@
     <Description description="" languagecode="1033" />
   </Descriptions>
   <options>
-    <option value="947970000">
+    <option value="947970000" IsHidden="0">
       <labels>
         <label description="Pending" languagecode="1033" />
         <label description="Gaida" languagecode="1062" />
       </labels>
     </option>
-    <option value="947970001">
+    <option value="947970001" IsHidden="0">
       <labels>
         <label description="In Progress" languagecode="1033" />
         <label description="Izpildās" languagecode="1062" />
       </labels>
     </option>
-    <option value="947970002">
+    <option value="947970002" IsHidden="0">
       <labels>
         <label description="Failed" languagecode="1033" />
         <label description="Neizdevās" languagecode="1062" />
       </labels>
     </option>
-    <option value="947970003">
+    <option value="947970003" IsHidden="0">
       <labels>
         <label description="Completed" languagecode="1033" />
         <label description="Pabeigts" languagecode="1062" />

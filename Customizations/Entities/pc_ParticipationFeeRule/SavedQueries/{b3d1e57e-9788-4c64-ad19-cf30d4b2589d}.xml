@@ -13,6 +13,7 @@
           <cell name="pc_from" width="100" />
           <cell name="pc_till" width="100" />
           <cell name="pc_amount" width="100" />
+          <cell name="pc_applytofirstmonth" width="160" />
         </row>
       </grid>
     </layoutxml>
@@ -27,7 +28,7 @@
           <attribute name="pc_from" />
           <attribute name="pc_till" />
           <attribute name="pc_amount" />
-          <order attribute="pc_from" descending="true" />
+          <attribute name="pc_applytofirstmonth" />
         </entity>
       </fetch>
     </fetchxml>

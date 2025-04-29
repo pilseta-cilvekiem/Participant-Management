@@ -16,7 +16,7 @@
   <isprivate>0</isprivate>
   <name>pc_SendDebtReminderToContact</name>
   <plugintypeid>
-    <plugintypeid>b9601727-de40-43c1-8030-475df269bc0b</plugintypeid>
+    <plugintypeexportkey>B9601727-DE40-43C1-8030-475DF269BC0B</plugintypeexportkey>
   </plugintypeid>
   <workflowsdkstepenabled>0</workflowsdkstepenabled>
 </customapi>
