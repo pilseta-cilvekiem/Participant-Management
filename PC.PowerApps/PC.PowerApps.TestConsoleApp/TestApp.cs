@@ -1,15 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
-using Microsoft.Xrm.Sdk.Query;
 using PC.PowerApps.ClientBase;
-using PC.PowerApps.ClientBase.Repositories;
-using PC.PowerApps.Common.Entities.Dataverse;
-using PC.PowerApps.Common.Extensions;
-using PC.PowerApps.Common.FetchXmlBuilder;
-using PC.PowerApps.Common.Repositories;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace PC.PowerApps.TestConsoleApp

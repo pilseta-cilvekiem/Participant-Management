@@ -1,5 +1,4 @@
-﻿using Microsoft.Xrm.Sdk;
-using PC.PowerApps.Common.Entities.Dataverse;
+﻿using PC.PowerApps.Common.Entities.Dataverse;
 using PC.PowerApps.Common.Repositories;
 using PC.PowerApps.Plugins.Contexts;
 using PC.PowerApps.Plugins.Enumerations;
