@@ -27,6 +27,9 @@ jobs:
           solution-output-file: ${{ runner.temp }}${{ env.ZIP_FILE }}
           tenant-id: ${{ secrets.MICROSOFT_TENANT_ID }}
 
+      - name: Set Git Email
+        run: git config --global user.email admin@pilsetacilvekiem.lv
+
       - name: Set Git Name
         run: git config --global user.name 'GitHub Actions'
 
