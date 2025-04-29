@@ -13,7 +13,7 @@
     <Description description="" languagecode="1033" />
   </Descriptions>
   <options>
-    <option value="947970001" ExternalValue="" Color="">
+    <option value="947970001" ExternalValue="" Color="" IsHidden="0">
       <labels>
         <label description="Days" languagecode="1033" />
         <label description="Dienas" languagecode="1062" />
@@ -22,7 +22,7 @@
         <Description description="" languagecode="1033" />
       </Descriptions>
     </option>
-    <option value="947970000" ExternalValue="" Color="">
+    <option value="947970000" ExternalValue="" Color="" IsHidden="0">
       <labels>
         <label description="Months" languagecode="1033" />
         <label description="Mēnešus" languagecode="1062" />

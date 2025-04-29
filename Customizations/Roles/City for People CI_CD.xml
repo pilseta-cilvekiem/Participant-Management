@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Role id="{3280aa50-03b2-ec11-983f-00224883c2f5}" name="City for People CI/CD" isinherited="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Role id="{3280aa50-03b2-ec11-983f-00224883c2f5}" name="City for People CI/CD" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <IsCustomizable>1</IsCustomizable>
   <RolePrivileges>
     <RolePrivilege name="prvCreateAppModule" level="Global" />

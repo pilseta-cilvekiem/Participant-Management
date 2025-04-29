@@ -13,7 +13,7 @@
     <Description description="" languagecode="1033" />
   </Descriptions>
   <options>
-    <option value="947970000" ExternalValue="" Color="#0000ff">
+    <option value="947970000" ExternalValue="" Color="#0000ff" IsHidden="0">
       <labels>
         <label description="Member" languagecode="1033" />
         <label description="Biedrs" languagecode="1062" />
@@ -22,7 +22,7 @@
         <Description description="" languagecode="1033" />
       </Descriptions>
     </option>
-    <option value="947970001" ExternalValue="" Color="#0000ff">
+    <option value="947970001" ExternalValue="" Color="#0000ff" IsHidden="0">
       <labels>
         <label description="Supporter" languagecode="1033" />
         <label description="Atbalstītājs" languagecode="1062" />

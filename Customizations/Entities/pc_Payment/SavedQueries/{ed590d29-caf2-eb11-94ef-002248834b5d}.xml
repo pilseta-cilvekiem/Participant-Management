@@ -11,6 +11,8 @@
       <grid name="resultset" jump="pc_name" select="1" icon="1" preview="1">
         <row name="result" id="pc_paymentid">
           <cell name="pc_date" width="100" />
+          <cell name="a_cb9a595c2f754324a55be876b4511777.pc_payername" width="209" />
+          <cell name="a_cb9a595c2f754324a55be876b4511777.pc_payerid" width="194" />
           <cell name="pc_amount" width="100" />
         </row>
       </grid>
@@ -26,12 +28,16 @@
           <filter type="and">
             <condition attribute="statecode" operator="eq" value="0" />
           </filter>
+          <link-entity alias="a_cb9a595c2f754324a55be876b4511777" name="pc_transaction" to="pc_transaction" from="pc_transactionid" link-type="outer" visible="false">
+            <attribute name="pc_payername" />
+            <attribute name="pc_payerid" />
+          </link-entity>
         </entity>
       </fetch>
     </fetchxml>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <LocalizedNames>
-      <LocalizedName description="Payments (Contact)" languagecode="1033" />
+      <LocalizedName description="Maksājumi (kontaktpersona)" languagecode="1033" />
       <LocalizedName description="Maksājumi (kontaktpersona)" languagecode="1062" />
     </LocalizedNames>
   </savedquery>
